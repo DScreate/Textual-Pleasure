@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23272aa3-6715-447f-96aa-85f957b425e7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Textual-Pleasure/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/bin/Debug/Textual_Pleasure.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/bin/Debug/Textual_Pleasure.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/bin/Debug/Textual_Pleasure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/bin/Debug/Textual_Pleasure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,12 +24,14 @@
       <file leaf-file-name="MainWindow.xaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="330">
+              <caret line="24" column="123" selection-start-line="24" selection-start-column="123" selection-end-line="24" selection-end-column="123" />
               <folding>
-                <marker date="1525330899260" expanded="true" signature="0:621" ph="&lt;&lt;Window.Resources&gt;&#10;        &#10;    &lt;/Window.Resources&gt; &lt;Grid&gt;&#10;        &#10;    &lt;/Grid&gt;.../&gt;" />
-                <marker date="1525330899260" expanded="false" signature="528:579" ph="&lt;.../&gt;" />
-                <marker date="1525330899260" expanded="true" signature="584:611" ph="&lt;.../&gt;" />
+                <marker date="1525333031714" expanded="true" signature="0:1421" ph="&lt;&lt;Window.Resources&gt;&#10;        &#10;    &lt;/Window.Resources&gt; &lt;Grid&gt;&#10;        &lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;Buttons to make choices go here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot;&gt;Controls go here (system, inventory acces, etc)&lt;/TextBlock&gt;&#10;&#10;    &lt;/Grid&gt;.../&gt;" />
+                <marker date="1525333031714" expanded="false" signature="528:579" ph="&lt;.../&gt;" />
+                <marker date="1525333031714" expanded="true" signature="584:1411" ph="&lt;&lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt; &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;Buttons to make choices go here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot;&gt;Controls go here (system, inventory acces, etc)&lt;/TextBlock&gt;.../&gt;" />
+                <marker date="1525333031714" expanded="true" signature="599:786" ph="&lt;&lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt; &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;.../&gt;" />
+                <marker date="1525333031714" expanded="true" signature="795:959" ph="&lt;&lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt; &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;.../&gt;" />
               </folding>
             </state>
           </provider>
@@ -162,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525315882245</updated>
-      <workItem from="1525315883382" duration="3550000" />
+      <workItem from="1525315883382" duration="5232000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1525315928697</created>
@@ -175,7 +185,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3550000" />
+    <option name="totallyTimeSpent" value="5232000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -192,7 +202,7 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="bottom" id="XAML Preview" weight="0.51783895" />
+      <window_info active="true" anchor="bottom" id="XAML Preview" visible="true" weight="0.51783895" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Unit Tests" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -202,10 +212,10 @@
       <window_info anchor="bottom" id="NuGet" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960917" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Build" visible="true" weight="0.32925585" />
+      <window_info anchor="bottom" id="Build" weight="0.32925585" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39959225" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -254,12 +264,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="330">
+          <caret line="24" column="123" selection-start-line="24" selection-start-column="123" selection-end-line="24" selection-end-column="123" />
           <folding>
-            <marker date="1525330899260" expanded="true" signature="0:621" ph="&lt;&lt;Window.Resources&gt;&#10;        &#10;    &lt;/Window.Resources&gt; &lt;Grid&gt;&#10;        &#10;    &lt;/Grid&gt;.../&gt;" />
-            <marker date="1525330899260" expanded="false" signature="528:579" ph="&lt;.../&gt;" />
-            <marker date="1525330899260" expanded="true" signature="584:611" ph="&lt;.../&gt;" />
+            <marker date="1525333031714" expanded="true" signature="0:1421" ph="&lt;&lt;Window.Resources&gt;&#10;        &#10;    &lt;/Window.Resources&gt; &lt;Grid&gt;&#10;        &lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;Buttons to make choices go here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot;&gt;Controls go here (system, inventory acces, etc)&lt;/TextBlock&gt;&#10;&#10;    &lt;/Grid&gt;.../&gt;" />
+            <marker date="1525333031714" expanded="false" signature="528:579" ph="&lt;.../&gt;" />
+            <marker date="1525333031714" expanded="true" signature="584:1411" ph="&lt;&lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt; &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;Buttons to make choices go here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot;&gt;Controls go here (system, inventory acces, etc)&lt;/TextBlock&gt;.../&gt;" />
+            <marker date="1525333031714" expanded="true" signature="599:786" ph="&lt;&lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt; &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;.../&gt;" />
+            <marker date="1525333031714" expanded="true" signature="795:959" ph="&lt;&lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt; &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;.../&gt;" />
           </folding>
         </state>
       </provider>

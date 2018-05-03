@@ -11,6 +11,19 @@
         
     </Window.Resources>
     <Grid>
-        
+        <Grid.ColumnDefinitions>     
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0" Background="LightBlue">Text Goes Here</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="1" Background="LightCoral">Images And Status</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Background="Aquamarine">Buttons to make choices go here</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" Background="BlanchedAlmond" TextWrapping="WrapWithOverflow">Controls go here (system, inventory acces, etc)
+        </TextBlock>
+
     </Grid>
 </Window>
