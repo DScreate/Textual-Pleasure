@@ -21,7 +21,13 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Background="LightBlue">Text Goes Here</TextBlock>
         <TextBlock Grid.Row="0" Grid.Column="1" Background="LightCoral">Images And Status</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="0" Background="Aquamarine">Buttons to make choices go here</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Background="Aquamarine"><InlineUIContainer>
+                <Button Content="Button" Width="75"/>
+            </InlineUIContainer><InlineUIContainer>
+                <Button Content="Button" Width="75"/>
+            </InlineUIContainer><InlineUIContainer>
+                <Button Content="Button" Width="75"/>
+            </InlineUIContainer></TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="1" Background="BlanchedAlmond" TextWrapping="WrapWithOverflow">Controls go here (system, inventory acces, etc)
         </TextBlock>
 

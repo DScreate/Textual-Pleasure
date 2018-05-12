@@ -64,6 +64,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Character\Body\IAppendage.cs" />
+    <Compile Include="Model\Character\Body\BodyPart.cs" />
+    <Compile Include="Model\Character\Body\ManipulateBehaviors\BluntManipulator.cs" />
+    <Compile Include="Model\Character\Body\ManipulateBehaviors\FineManipulator.cs" />
+    <Compile Include="Model\Character\Body\ManipulateBehaviors\IManipulate.cs" />
+    <Compile Include="Model\Character\Body\Manipulator.cs" />
+    <Compile Include="Model\Character\Character.cs" />
+    <Compile Include="Model\Dice\Die.cs" />
+    <Compile Include="Model\Dice\Roller.cs" />
+    <Compile Include="Model\Items\IEquipable.cs" />
+    <Compile Include="Model\Items\IExternal.cs" />
+    <Compile Include="Model\Items\IInternal.cs" />
+    <Compile Include="Model\Items\IUsable.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -81,7 +95,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model" />
+    <Folder Include="Common" />
+    <Folder Include="Model\Character\Mental" />
+    <Folder Include="Model\Character\Social" />
+    <Folder Include="Model\Character\Speed" />
     <Folder Include="View" />
     <Folder Include="ViewModel" />
   </ItemGroup>

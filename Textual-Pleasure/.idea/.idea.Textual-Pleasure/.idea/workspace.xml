@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23272aa3-6715-447f-96aa-85f957b425e7" name="Default" comment="">
+    <list default="true" id="23272aa3-6715-447f-96aa-85f957b425e7" name="Default" comment="Commit Initial UI Layout (Just basic design, no code)">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Textual-Pleasure/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Textual-Pleasure/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Textual-Pleasure/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Textual-Pleasure/riderModule.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure.sln.DotSettings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure.sln.DotSettings.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Common/Library/CommonBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/BodyPart.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/IAppendage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/BluntManipulator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/FineManipulator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/IManipulate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/Manipulator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Character.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Dice/Die.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Dice/Roller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Items/IEquipable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Items/IExternal.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Items/IInternal.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Model/Items/IUsable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textual-Pleasure/Properties/Annotations.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Textual-Pleasure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Textual-Pleasure/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Textual-Pleasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Textual-Pleasure/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/bin/Debug/Textual_Pleasure.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/bin/Debug/Textual_Pleasure.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/bin/Debug/Textual_Pleasure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/bin/Debug/Textual_Pleasure.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/Textual-Pleasure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/Textual-Pleasure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.baml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.g.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual-Pleasure.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual-Pleasure.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual-Pleasure.csprojResolveAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual-Pleasure.csprojResolveAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Textual-Pleasure/obj/Debug/Textual_Pleasure_MarkupCompile.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,46 +42,169 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="MainWindow.xaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="24" column="123" selection-start-line="24" selection-start-column="123" selection-end-line="24" selection-end-column="123" />
+            <state relative-caret-position="345">
+              <caret line="23" column="82" lean-forward="true" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
               <folding>
-                <marker date="1525333031714" expanded="true" signature="0:1421" ph="&lt;&lt;Window.Resources&gt;&#10;        &#10;    &lt;/Window.Resources&gt; &lt;Grid&gt;&#10;        &lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;Buttons to make choices go here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot;&gt;Controls go here (system, inventory acces, etc)&lt;/TextBlock&gt;&#10;&#10;    &lt;/Grid&gt;.../&gt;" />
-                <marker date="1525333031714" expanded="false" signature="528:579" ph="&lt;.../&gt;" />
-                <marker date="1525333031714" expanded="true" signature="584:1411" ph="&lt;&lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt; &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;Buttons to make choices go here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot;&gt;Controls go here (system, inventory acces, etc)&lt;/TextBlock&gt;.../&gt;" />
-                <marker date="1525333031714" expanded="true" signature="599:786" ph="&lt;&lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt; &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;.../&gt;" />
-                <marker date="1525333031714" expanded="true" signature="795:959" ph="&lt;&lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt; &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;.../&gt;" />
+                <marker date="1526018955996" expanded="true" signature="0:1749" ph="&lt;&lt;Window.Resources&gt;&#10;        &#10;    &lt;/Window.Resources&gt; &lt;Grid&gt;&#10;        &lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot; TextWrapping=&quot;WrapWithOverflow&quot;&gt;Controls go here (system, inventory acces, etc)&#10;        &lt;/TextBlock&gt;&#10;&#10;    &lt;/Grid&gt;.../&gt;" />
+                <marker date="1526018955996" expanded="true" signature="528:579" ph="&lt;.../&gt;" />
+                <marker date="1526018955996" expanded="true" signature="584:1739" ph="&lt;&lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt; &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot; TextWrapping=&quot;WrapWithOverflow&quot;&gt;Controls go here (system, inventory acces, etc)&#10;        &lt;/TextBlock&gt;.../&gt;" />
+                <marker date="1526018955996" expanded="true" signature="599:786" ph="&lt;&lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt; &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;.../&gt;" />
+                <marker date="1526018955996" expanded="true" signature="795:959" ph="&lt;&lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt; &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;.../&gt;" />
+                <marker date="1526018955996" expanded="true" signature="1155:1549" ph="&lt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;.../&gt;" />
+                <marker date="1526018955996" expanded="true" signature="1219:1325" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+                <marker date="1526018955996" expanded="true" signature="1325:1431" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+                <marker date="1526018955996" expanded="true" signature="1431:1537" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+                <marker date="1526018955996" expanded="true" signature="1558:1726" ph="&lt;Controls go here (system, inventory acces, etc).../&gt;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.xaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Textual-Pleasure/App.xaml">
+      <file leaf-file-name="BodyPart.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/BodyPart.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
-                <marker date="1525330393773" expanded="true" signature="0:373" ph="&lt;&lt;Application.Resources&gt;&#10;         &#10;    &lt;/Application.Resources&gt;.../&gt;" />
-                <marker date="1525330393773" expanded="true" signature="296:358" ph="&lt;.../&gt;" />
+                <marker date="1526012271699" expanded="true" signature="47:228" ph="{...}" />
+                <marker date="1526012271699" expanded="true" signature="75:226" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.xaml.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Textual-Pleasure/App.xaml.cs">
+      <file leaf-file-name="IAppendage.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/IAppendage.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            <state relative-caret-position="30">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
               <folding>
-                <marker date="1525330220654" expanded="true" signature="49:397" ph="{...}" />
-                <marker date="1525330220654" expanded="true" signature="54:121" ph="/// Interaction logic for App.xaml ... " />
-                <marker date="1525330220654" expanded="true" signature="148:395" ph="{...}" />
-                <marker date="1525330220654" expanded="true" signature="218:391" ph="{...}" />
+                <marker date="1525920561062" expanded="true" signature="47:104" ph="{...}" />
+                <marker date="1525920561062" expanded="true" signature="81:102" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Character.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Character.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+              <folding>
+                <marker date="1526018552487" expanded="true" signature="6:272" ph="..." />
+                <marker date="1526018552487" expanded="true" signature="316:3675" ph="{...}" />
+                <marker date="1526018552487" expanded="true" signature="354:3673" ph="{...}" />
+                <marker date="1526018552487" expanded="true" signature="502:657" ph="{...}" />
+                <marker date="1526018552487" expanded="true" signature="966:1712" ph="Stats" />
+                <marker date="1526018552487" expanded="true" signature="989:1149" ph="Body" />
+                <marker date="1526018552487" expanded="true" signature="1159:1318" ph="Mental" />
+                <marker date="1526018552487" expanded="true" signature="1336:1504" ph="Speed" />
+                <marker date="1526018552487" expanded="true" signature="1514:1683" ph="Social" />
+                <marker date="1526018552487" expanded="true" signature="1722:2351" ph="BodyControl" />
+                <marker date="1526018552487" expanded="true" signature="1853:2031" ph="{...}" />
+                <marker date="1526018552487" expanded="true" signature="2147:2323" ph="{...}" />
+                <marker date="1526018552487" expanded="false" signature="2379:3666" ph="ID" />
+                <marker date="1526018552487" expanded="true" signature="2587:2640" ph="{...}" />
+                <marker date="1526018552487" expanded="true" signature="2685:2882" ph="{...}" />
+                <marker date="1526018552487" expanded="true" signature="2742:2860" ph="{...}" />
+                <marker date="1526018552487" expanded="true" signature="2961:3637" ph="{...}" />
+                <marker date="1526018552487" expanded="true" signature="3142:3228" ph="/* Create a new Stringbuilder to collect the bytes ... */" />
+                <marker date="1526018552487" expanded="true" signature="3300:3405" ph="/* Loop through each byte of the hashed data ... */" />
+                <marker date="1526018552487" expanded="true" signature="3455:3540" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Die.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Dice/Die.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+              <folding>
+                <marker date="1526011540831" expanded="true" signature="52:393" ph="{...}" />
+                <marker date="1526011540831" expanded="true" signature="75:391" ph="{...}" />
+                <marker date="1526011540831" expanded="true" signature="221:298" ph="{...}" />
+                <marker date="1526011540831" expanded="true" signature="325:385" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Roller.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Dice/Roller.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <marker date="1526011767429" expanded="true" signature="6:71" ph="..." />
+                <marker date="1526011767429" expanded="true" signature="110:909" ph="{...}" />
+                <marker date="1526011767429" expanded="true" signature="136:907" ph="{...}" />
+                <marker date="1526011767429" expanded="true" signature="318:557" ph="{...}" />
+                <marker date="1526011767429" expanded="true" signature="410:516" ph="{...}" />
+                <marker date="1526011767429" expanded="true" signature="609:689" ph="{...}" />
+                <marker date="1526011767429" expanded="true" signature="726:773" ph="{...}" />
+                <marker date="1526011767429" expanded="true" signature="806:901" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IManipulate.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/IManipulate.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+              <folding>
+                <marker date="1526011907551" expanded="true" signature="67:222" ph="{...}" />
+                <marker date="1526011907551" expanded="true" signature="181:220" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Manipulator.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/Manipulator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <folding>
+                <marker date="1526012194675" expanded="true" signature="113:339" ph="{...}" />
+                <marker date="1526012194675" expanded="true" signature="144:337" ph="{...}" />
+                <marker date="1526012194675" expanded="true" signature="272:331" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FineManipulator.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/FineManipulator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+              <folding>
+                <marker date="1526012011160" expanded="true" signature="67:239" ph="{...}" />
+                <marker date="1526012011160" expanded="true" signature="116:237" ph="{...}" />
+                <marker date="1526012011160" expanded="true" signature="155:231" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BluntManipulator.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/BluntManipulator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="55" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="55" />
+              <folding>
+                <marker date="1526012194628" expanded="true" signature="67:240" ph="{...}" />
+                <marker date="1526012194628" expanded="true" signature="117:238" ph="{...}" />
+                <marker date="1526012194628" expanded="true" signature="156:232" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -68,11 +213,30 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="DSCreate" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Textual-Pleasure/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Textual-Pleasure/App.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Items/IEquipable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Dice/Roller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Dice/Die.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/Manipulator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/FineManipulator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/BluntManipulator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/IManipulate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Character.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/IAppendage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/BodyPart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Items/IInternal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Properties/Annotations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Items/IExternal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Items/IUsable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Textual-Pleasure/App.xaml" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -82,6 +246,29 @@
         <option value="$PROJECT_DIR$/Textual-Pleasure/App.xaml.cs" />
         <option value="$PROJECT_DIR$/Textual-Pleasure/App.xaml" />
         <option value="$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Library/CommonBase.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Items/Equippable.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/Appendage.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Items/Internal.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Items/Equipable.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Items/IEquipable.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Items/Usable.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Items/IUsable.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Items/External.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Items/IExternal.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Items/IInternal.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/IAppendage.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Dice/Die.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Dice/Roller.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/IManipulator.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/IManipulate.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/IManipulate.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/Grip.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/FineManipulator.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/BluntManipulator.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/Manipulator.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/BodyPart.cs" />
+        <option value="$PROJECT_DIR$/Textual-Pleasure/Model/Character/Character.cs" />
       </list>
     </option>
   </component>
@@ -97,7 +284,9 @@
     <option name="width" value="976" />
     <option name="height" value="556" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -120,7 +309,36 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="Textual-Pleasure (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Textual-Pleasure" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="App.xaml" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Model" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Textual-Pleasure (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Textual-Pleasure" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Model" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Character" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Textual-Pleasure (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Textual-Pleasure" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Model" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Character" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Body" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Textual-Pleasure (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Textual-Pleasure" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Model" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Dice" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Textual-Pleasure (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Textual-Pleasure" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Model" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Items" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -172,7 +390,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525315882245</updated>
-      <workItem from="1525315883382" duration="5232000" />
+      <workItem from="1525315883382" duration="5949000" />
+      <workItem from="1525488464578" duration="462000" />
+      <workItem from="1525488930023" duration="624000" />
+      <workItem from="1525918387480" duration="10577000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1525315928697</created>
@@ -185,7 +406,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5232000" />
+    <option name="totallyTimeSpent" value="17612000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -198,32 +419,31 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1093" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info active="true" anchor="bottom" id="XAML Preview" visible="true" weight="0.51783895" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="XAML Preview" order="7" weight="0.51783895" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32925585" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32925585" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32925585" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960917" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" weight="0.32925585" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39959225" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.32925585" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,9 +458,138 @@
     <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <marker date="1526018955996" expanded="true" signature="0:1749" ph="&lt;&lt;Window.Resources&gt;&#10;        &#10;    &lt;/Window.Resources&gt; &lt;Grid&gt;&#10;        &lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot; TextWrapping=&quot;WrapWithOverflow&quot;&gt;Controls go here (system, inventory acces, etc)&#10;        &lt;/TextBlock&gt;&#10;&#10;    &lt;/Grid&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="528:579" ph="&lt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="584:1739" ph="&lt;&lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt; &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot; TextWrapping=&quot;WrapWithOverflow&quot;&gt;Controls go here (system, inventory acces, etc)&#10;        &lt;/TextBlock&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="599:786" ph="&lt;&lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt; &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="795:959" ph="&lt;&lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt; &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1155:1549" ph="&lt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1219:1325" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1325:1431" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1431:1537" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1558:1726" ph="&lt;Controls go here (system, inventory acces, etc).../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/App.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding>
+            <marker date="1525330393773" expanded="true" signature="0:373" ph="&lt;&lt;Application.Resources&gt;&#10;         &#10;    &lt;/Application.Resources&gt;.../&gt;" />
+            <marker date="1525330393773" expanded="true" signature="296:358" ph="&lt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Textual-Pleasure/App.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <marker date="1525330220654" expanded="true" signature="49:397" ph="{...}" />
+            <marker date="1525330220654" expanded="true" signature="54:121" ph="/// Interaction logic for App.xaml ... " />
+            <marker date="1525330220654" expanded="true" signature="148:395" ph="{...}" />
+            <marker date="1525330220654" expanded="true" signature="218:391" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <marker date="1526018955996" expanded="true" signature="0:1749" ph="&lt;&lt;Window.Resources&gt;&#10;        &#10;    &lt;/Window.Resources&gt; &lt;Grid&gt;&#10;        &lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot; TextWrapping=&quot;WrapWithOverflow&quot;&gt;Controls go here (system, inventory acces, etc)&#10;        &lt;/TextBlock&gt;&#10;&#10;    &lt;/Grid&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="528:579" ph="&lt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="584:1739" ph="&lt;&lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt; &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot; TextWrapping=&quot;WrapWithOverflow&quot;&gt;Controls go here (system, inventory acces, etc)&#10;        &lt;/TextBlock&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="599:786" ph="&lt;&lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt; &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="795:959" ph="&lt;&lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt; &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1155:1549" ph="&lt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1219:1325" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1325:1431" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1431:1537" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1558:1726" ph="&lt;Controls go here (system, inventory acces, etc).../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/App.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding>
+            <marker date="1525330393773" expanded="true" signature="0:373" ph="&lt;&lt;Application.Resources&gt;&#10;         &#10;    &lt;/Application.Resources&gt;.../&gt;" />
+            <marker date="1525330393773" expanded="true" signature="296:358" ph="&lt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/App.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <marker date="1525330220654" expanded="true" signature="49:397" ph="{...}" />
+            <marker date="1525330220654" expanded="true" signature="54:121" ph="/// Interaction logic for App.xaml ... " />
+            <marker date="1525330220654" expanded="true" signature="148:395" ph="{...}" />
+            <marker date="1525330220654" expanded="true" signature="218:391" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <marker date="1526018955996" expanded="true" signature="0:1749" ph="&lt;&lt;Window.Resources&gt;&#10;        &#10;    &lt;/Window.Resources&gt; &lt;Grid&gt;&#10;        &lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot; TextWrapping=&quot;WrapWithOverflow&quot;&gt;Controls go here (system, inventory acces, etc)&#10;        &lt;/TextBlock&gt;&#10;&#10;    &lt;/Grid&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="528:579" ph="&lt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="584:1739" ph="&lt;&lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt; &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot; TextWrapping=&quot;WrapWithOverflow&quot;&gt;Controls go here (system, inventory acces, etc)&#10;        &lt;/TextBlock&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="599:786" ph="&lt;&lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt; &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="795:959" ph="&lt;&lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt; &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1155:1549" ph="&lt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1219:1325" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1325:1431" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1431:1537" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1558:1726" ph="&lt;Controls go here (system, inventory acces, etc).../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/App.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding>
+            <marker date="1525330393773" expanded="true" signature="0:373" ph="&lt;&lt;Application.Resources&gt;&#10;         &#10;    &lt;/Application.Resources&gt;.../&gt;" />
+            <marker date="1525330393773" expanded="true" signature="296:358" ph="&lt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/App.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <marker date="1525330220654" expanded="true" signature="49:397" ph="{...}" />
+            <marker date="1525330220654" expanded="true" signature="54:121" ph="/// Interaction logic for App.xaml ... " />
+            <marker date="1525330220654" expanded="true" signature="148:395" ph="{...}" />
+            <marker date="1525330220654" expanded="true" signature="218:391" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/App.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
             <marker date="1525330220654" expanded="true" signature="49:397" ph="{...}" />
@@ -262,16 +611,194 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Library/CommonBase.cs" />
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Items/IInternal.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding>
+            <marker date="1525920561125" expanded="true" signature="38:94" ph="{...}" />
+            <marker date="1525920561125" expanded="true" signature="71:92" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Items/IEquipable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1525919839782" expanded="true" signature="38:95" ph="{...}" />
+            <marker date="1525919839782" expanded="true" signature="72:93" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Items/IUsable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding>
+            <marker date="1525919839881" expanded="true" signature="38:92" ph="{...}" />
+            <marker date="1525919839881" expanded="true" signature="69:90" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Items/IExternal.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding>
+            <marker date="1525919839914" expanded="true" signature="38:94" ph="{...}" />
+            <marker date="1525919839914" expanded="true" signature="71:92" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/IAppendage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding>
+            <marker date="1525920561062" expanded="true" signature="47:104" ph="{...}" />
+            <marker date="1525920561062" expanded="true" signature="81:102" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Dice/Die.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+          <folding>
+            <marker date="1526011540831" expanded="true" signature="52:393" ph="{...}" />
+            <marker date="1526011540831" expanded="true" signature="75:391" ph="{...}" />
+            <marker date="1526011540831" expanded="true" signature="221:298" ph="{...}" />
+            <marker date="1526011540831" expanded="true" signature="325:385" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Dice/Roller.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <marker date="1526011767429" expanded="true" signature="6:71" ph="..." />
+            <marker date="1526011767429" expanded="true" signature="110:909" ph="{...}" />
+            <marker date="1526011767429" expanded="true" signature="136:907" ph="{...}" />
+            <marker date="1526011767429" expanded="true" signature="318:557" ph="{...}" />
+            <marker date="1526011767429" expanded="true" signature="410:516" ph="{...}" />
+            <marker date="1526011767429" expanded="true" signature="609:689" ph="{...}" />
+            <marker date="1526011767429" expanded="true" signature="726:773" ph="{...}" />
+            <marker date="1526011767429" expanded="true" signature="806:901" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/IManipulate.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <marker date="1526011907551" expanded="true" signature="67:222" ph="{...}" />
+            <marker date="1526011907551" expanded="true" signature="181:220" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/FineManipulator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding>
+            <marker date="1526012011160" expanded="true" signature="67:239" ph="{...}" />
+            <marker date="1526012011160" expanded="true" signature="116:237" ph="{...}" />
+            <marker date="1526012011160" expanded="true" signature="155:231" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/ManipulateBehaviors/BluntManipulator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="55" />
+          <folding>
+            <marker date="1526012194628" expanded="true" signature="67:240" ph="{...}" />
+            <marker date="1526012194628" expanded="true" signature="117:238" ph="{...}" />
+            <marker date="1526012194628" expanded="true" signature="156:232" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/Manipulator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <marker date="1526012194675" expanded="true" signature="113:339" ph="{...}" />
+            <marker date="1526012194675" expanded="true" signature="144:337" ph="{...}" />
+            <marker date="1526012194675" expanded="true" signature="272:331" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Body/BodyPart.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <marker date="1526012271699" expanded="true" signature="47:228" ph="{...}" />
+            <marker date="1526012271699" expanded="true" signature="75:226" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textual-Pleasure/Model/Character/Character.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding>
+            <marker date="1526018552487" expanded="true" signature="6:272" ph="..." />
+            <marker date="1526018552487" expanded="true" signature="316:3675" ph="{...}" />
+            <marker date="1526018552487" expanded="true" signature="354:3673" ph="{...}" />
+            <marker date="1526018552487" expanded="true" signature="502:657" ph="{...}" />
+            <marker date="1526018552487" expanded="true" signature="966:1712" ph="Stats" />
+            <marker date="1526018552487" expanded="true" signature="989:1149" ph="Body" />
+            <marker date="1526018552487" expanded="true" signature="1159:1318" ph="Mental" />
+            <marker date="1526018552487" expanded="true" signature="1336:1504" ph="Speed" />
+            <marker date="1526018552487" expanded="true" signature="1514:1683" ph="Social" />
+            <marker date="1526018552487" expanded="true" signature="1722:2351" ph="BodyControl" />
+            <marker date="1526018552487" expanded="true" signature="1853:2031" ph="{...}" />
+            <marker date="1526018552487" expanded="true" signature="2147:2323" ph="{...}" />
+            <marker date="1526018552487" expanded="false" signature="2379:3666" ph="ID" />
+            <marker date="1526018552487" expanded="true" signature="2587:2640" ph="{...}" />
+            <marker date="1526018552487" expanded="true" signature="2685:2882" ph="{...}" />
+            <marker date="1526018552487" expanded="true" signature="2742:2860" ph="{...}" />
+            <marker date="1526018552487" expanded="true" signature="2961:3637" ph="{...}" />
+            <marker date="1526018552487" expanded="true" signature="3142:3228" ph="/* Create a new Stringbuilder to collect the bytes ... */" />
+            <marker date="1526018552487" expanded="true" signature="3300:3405" ph="/* Loop through each byte of the hashed data ... */" />
+            <marker date="1526018552487" expanded="true" signature="3455:3540" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Textual-Pleasure/MainWindow.xaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="123" selection-start-line="24" selection-start-column="123" selection-end-line="24" selection-end-column="123" />
+        <state relative-caret-position="345">
+          <caret line="23" column="82" lean-forward="true" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
           <folding>
-            <marker date="1525333031714" expanded="true" signature="0:1421" ph="&lt;&lt;Window.Resources&gt;&#10;        &#10;    &lt;/Window.Resources&gt; &lt;Grid&gt;&#10;        &lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;Buttons to make choices go here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot;&gt;Controls go here (system, inventory acces, etc)&lt;/TextBlock&gt;&#10;&#10;    &lt;/Grid&gt;.../&gt;" />
-            <marker date="1525333031714" expanded="false" signature="528:579" ph="&lt;.../&gt;" />
-            <marker date="1525333031714" expanded="true" signature="584:1411" ph="&lt;&lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt; &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;Buttons to make choices go here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot;&gt;Controls go here (system, inventory acces, etc)&lt;/TextBlock&gt;.../&gt;" />
-            <marker date="1525333031714" expanded="true" signature="599:786" ph="&lt;&lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt; &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;.../&gt;" />
-            <marker date="1525333031714" expanded="true" signature="795:959" ph="&lt;&lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt; &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="0:1749" ph="&lt;&lt;Window.Resources&gt;&#10;        &#10;    &lt;/Window.Resources&gt; &lt;Grid&gt;&#10;        &lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt;&#10;        &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt;&#10;        &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;/TextBlock&gt;&#10;        &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot; TextWrapping=&quot;WrapWithOverflow&quot;&gt;Controls go here (system, inventory acces, etc)&#10;        &lt;/TextBlock&gt;&#10;&#10;    &lt;/Grid&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="528:579" ph="&lt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="584:1739" ph="&lt;&lt;Grid.ColumnDefinitions&gt;     &#10;            &lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;            &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;&#10;        &lt;/Grid.ColumnDefinitions&gt; &lt;Grid.RowDefinitions&gt;&#10;            &lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt;&#10;            &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;&#10;        &lt;/Grid.RowDefinitions&gt; &lt;TextBlock Grid.Column=&quot;0&quot; Background=&quot;LightBlue&quot;&gt;Text Goes Here&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Background=&quot;LightCoral&quot;&gt;Images And Status&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Background=&quot;Aquamarine&quot;&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;/TextBlock&gt; &lt;TextBlock Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Background=&quot;BlanchedAlmond&quot; TextWrapping=&quot;WrapWithOverflow&quot;&gt;Controls go here (system, inventory acces, etc)&#10;        &lt;/TextBlock&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="599:786" ph="&lt;&lt;ColumnDefinition Width=&quot;3*&quot;&gt;&lt;/ColumnDefinition&gt; &lt;ColumnDefinition Width=&quot;1.5*&quot;&gt;&lt;/ColumnDefinition&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="795:959" ph="&lt;&lt;RowDefinition Height=&quot;3*&quot;&gt;&lt;/RowDefinition&gt; &lt;RowDefinition Height=&quot;1*&quot;&gt;&lt;/RowDefinition&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1155:1549" ph="&lt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;&lt;InlineUIContainer&gt;&#10;                &lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;&#10;            &lt;/InlineUIContainer&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1219:1325" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1325:1431" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1431:1537" ph="&lt;&lt;Button Content=&quot;Button&quot; Width=&quot;75&quot;/&gt;.../&gt;" />
+            <marker date="1526018955996" expanded="true" signature="1558:1726" ph="&lt;Controls go here (system, inventory acces, etc).../&gt;" />
           </folding>
         </state>
       </provider>
