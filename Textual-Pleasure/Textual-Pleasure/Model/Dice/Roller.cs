@@ -8,28 +8,63 @@ namespace Textual_Pleasure.Model.Dice
     {
         private ArrayList dice;
 
+        public int DieSides { get; set; }
+
         public Random prng { get; set; }
 
-        
+        public RollResults res;
+
+        public bool EnableCritHits { get; set; }
+
+        public bool EnableCritFails { get; set; }
+
+        public int HitThreshold { get; set; }
+
+        public int CritThreshold { get; set; }
+
+        public int CritFailThreshold { get; set; }
+    
+    
         // TODO: Implement crits
-        public int RollDiceAgainstThreshold(int threshold)
+        public RollResults RollDiceAgainstThreshold()
         {
-            int successes = 0;
+            res.Reset();
             
             foreach (Die die in dice)
             {
-                if (die.Roll() > threshold)
-                    successes++;
+                int roll = die.Roll();
+                if (roll >= HitThreshold)
+                {
+                    res.Hits++;
+                    if (EnableCritHits && roll >= CritThreshold)
+                        res.Crits++;
+                }
+                else
+                {
+                    res.Fails++;
+                    if (EnableCritFails && roll <= CritFailThreshold)
+                        res.Crits++;
+                }
 
             }
 
-            return successes;
+            return res;
         }
 
-        public Roller(ArrayList dice, Random prng)
+        public Roller(int numDice, Random prng, int sides = 6, bool CritsOn = false, bool CritFailsOn = false)
         {
-            this.dice = dice;
+            dice = dice;
             this.prng = prng;
+            this.DieSides = sides;
+            this.EnableCritHits = CritsOn;
+            this.EnableCritFails = CritFailsOn;
+            res = new RollResults();
+        }
+
+        public void CreateDie()
+        {
+            string ID = dice.Count + "_" + DieSides;
+            Die newDie = new Die(DieSides, ID, prng);
         }
 
         public void AddDie(Die die)
@@ -41,6 +76,35 @@ namespace Textual_Pleasure.Model.Dice
         {
             if (dice.Count > 0)
                 dice.RemoveAt(dice.Count);
+        }
+    }
+
+    public class RollResults
+    {
+        public int Hits { get; set; }
+        public int Crits { get; set; }
+        public int Fails { get; set; }
+        public int CritFails { get; set; }
+
+        public RollResults()
+        {
+            Hits = 0;
+            Crits = 0;
+            Fails = 0;
+            CritFails = 0;
+        }
+
+        public void Reset()
+        {
+            Hits = 0;
+            Crits = 0;
+            Fails = 0;
+            CritFails = 0;
+        }
+
+        public override string ToString()
+        {
+            return "Hits: " + Hits + ", Crits: " + Crits + ", Fails: " + Fails + ", CritFails: " + CritFails;
         }
     }
 }

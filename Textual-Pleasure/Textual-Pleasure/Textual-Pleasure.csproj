@@ -58,6 +58,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Common\IDescribable.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -95,12 +96,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common" />
-    <Folder Include="Model\Character\Mental" />
-    <Folder Include="Model\Character\Social" />
-    <Folder Include="Model\Character\Speed" />
-    <Folder Include="View" />
-    <Folder Include="ViewModel" />
+    <Folder Include="Model\Character\Mental\" />
+    <Folder Include="Model\Character\Social\" />
+    <Folder Include="Model\Character\Speed\" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

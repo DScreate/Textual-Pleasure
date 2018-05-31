@@ -13,3 +13,10 @@ D:\Documents\Projects\Textual-Pleasure\Textual-Pleasure\Textual-Pleasure\obj\Deb
 D:\Documents\Projects\Textual-Pleasure\Textual-Pleasure\Textual-Pleasure\obj\Debug\Textual-Pleasure.csproj.CoreCompileInputs.cache
 D:\Documents\Projects\Textual-Pleasure\Textual-Pleasure\Textual-Pleasure\obj\Debug\Textual_Pleasure.exe
 D:\Documents\Projects\Textual-Pleasure\Textual-Pleasure\Textual-Pleasure\obj\Debug\Textual_Pleasure.pdb
+C:\Users\Ahriman\Documents\Projects\Textual-Pleasure\Textual-Pleasure\Textual-Pleasure\obj\Debug\Textual-Pleasure.csprojResolveAssemblyReference.cache
+C:\Users\Ahriman\Documents\Projects\Textual-Pleasure\Textual-Pleasure\Textual-Pleasure\obj\Debug\MainWindow.g.cs
+C:\Users\Ahriman\Documents\Projects\Textual-Pleasure\Textual-Pleasure\Textual-Pleasure\obj\Debug\App.g.cs
+C:\Users\Ahriman\Documents\Projects\Textual-Pleasure\Textual-Pleasure\Textual-Pleasure\obj\Debug\Textual_Pleasure_MarkupCompile.cache
+C:\Users\Ahriman\Documents\Projects\Textual-Pleasure\Textual-Pleasure\Textual-Pleasure\obj\Debug\Textual_Pleasure_MarkupCompile.lref
+C:\Users\Ahriman\Documents\Projects\Textual-Pleasure\Textual-Pleasure\Textual-Pleasure\obj\Debug\Textual_Pleasure.exe
+C:\Users\Ahriman\Documents\Projects\Textual-Pleasure\Textual-Pleasure\Textual-Pleasure\obj\Debug\Textual_Pleasure.pdb
