@@ -1,8 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography;
 using System.Text;
 using Textual_Pleasure.Model.Character.Body;
@@ -80,13 +76,11 @@ namespace Textual_Pleasure.Model.Character
         
         #endregion
         
-        
-
         #region ID
         private string HashCode { get; set; }
 
         // TODO: Implement a more robust ID system -> perhaps checking character dictionary? Might be bad coupling
-        private string GenerateID()
+        private string GenerateId()
         {
             return Name + Idnum;
         }

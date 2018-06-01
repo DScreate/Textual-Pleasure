@@ -1,15 +1,21 @@
-﻿<Window x:Class="Textual_Pleasure.MainWindow"
+﻿<Window x:Class="Textual_Pleasure.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Textual_Pleasure"
+        xmlns:local="clr-namespace:Textual_Pleasure.View"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:viewmodel="clr-namespace:Textual_Pleasure.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
         
     </Window.Resources>
+
+    <Window.DataContext>
+        <viewmodel:MainWindowViewModel />
+    </Window.DataContext>
+    
     <Grid>
         <Grid.ColumnDefinitions>     
             <ColumnDefinition Width="3*"></ColumnDefinition>

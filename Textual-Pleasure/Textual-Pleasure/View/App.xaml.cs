@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Textual_Pleasure
+namespace Textual_Pleasure.View
 {
   /// <summary>
   /// Interaction logic for App.xaml

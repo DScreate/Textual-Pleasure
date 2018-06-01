@@ -1,4 +1,4 @@
-﻿namespace Textual_Pleasure
+﻿namespace Textual_Pleasure.View
 {
   /// <summary>
   /// Interaction logic for MainWindow.xaml

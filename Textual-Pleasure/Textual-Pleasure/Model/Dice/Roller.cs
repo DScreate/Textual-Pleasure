@@ -6,13 +6,13 @@ namespace Textual_Pleasure.Model.Dice
 {
     public class Roller
     {
-        private ArrayList dice;
+        private ArrayList _dice;
 
         public int DieSides { get; set; }
 
-        public Random prng { get; set; }
+        public Random Prng { get; set; }
 
-        public RollResults res;
+        public RollResults Res;
 
         public bool EnableCritHits { get; set; }
 
@@ -24,58 +24,57 @@ namespace Textual_Pleasure.Model.Dice
 
         public int CritFailThreshold { get; set; }
     
-    
-        // TODO: Implement crits
         public RollResults RollDiceAgainstThreshold()
         {
-            res.Reset();
+            Res.Reset();
             
-            foreach (Die die in dice)
+            foreach (Die die in _dice)
             {
                 int roll = die.Roll();
                 if (roll >= HitThreshold)
                 {
-                    res.Hits++;
+                    Res.Hits++;
                     if (EnableCritHits && roll >= CritThreshold)
-                        res.Crits++;
+                        Res.Crits++;
                 }
                 else
                 {
-                    res.Fails++;
+                    Res.Fails++;
                     if (EnableCritFails && roll <= CritFailThreshold)
-                        res.Crits++;
+                        Res.Crits++;
                 }
 
             }
 
-            return res;
+            return Res;
         }
 
-        public Roller(int numDice, Random prng, int sides = 6, bool CritsOn = false, bool CritFailsOn = false)
+        // TODO: Double check this construtor to implement numDice
+        public Roller(int numDice, Random prng, int sides = 6, bool critsOn = false, bool critFailsOn = false)
         {
-            dice = dice;
-            this.prng = prng;
+            //_dice = _dice;
+            this.Prng = prng;
             this.DieSides = sides;
-            this.EnableCritHits = CritsOn;
-            this.EnableCritFails = CritFailsOn;
-            res = new RollResults();
+            this.EnableCritHits = critsOn;
+            this.EnableCritFails = critFailsOn;
+            Res = new RollResults();
         }
 
         public void CreateDie()
         {
-            string ID = dice.Count + "_" + DieSides;
-            Die newDie = new Die(DieSides, ID, prng);
+            string id = _dice.Count + "_" + DieSides;
+            Die newDie = new Die(DieSides, id, Prng);
         }
 
         public void AddDie(Die die)
         {
-            dice.Add(die);
+            _dice.Add(die);
         }
 
         public void RemoveDie()
         {
-            if (dice.Count > 0)
-                dice.RemoveAt(dice.Count);
+            if (_dice.Count > 0)
+                _dice.RemoveAt(_dice.Count);
         }
     }
 
