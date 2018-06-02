@@ -1,4 +1,4 @@
-﻿namespace Textual_Pleasure.Model.Character.Body
+﻿namespace Engine.Model.Character.Body
 {
     public class BodyPart
     {

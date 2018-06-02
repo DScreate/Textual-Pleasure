@@ -1,6 +1,6 @@
-﻿namespace Textual_Pleasure.Model.Character.Body.ManipulateBehaviors
+﻿namespace Engine.Model.Character.Body.ManipulateBehaviors
 {
-    public class BluntManipulator : IManipulate
+    public class FineManipulator : IManipulate
     {
         public void Manipulate()
         {

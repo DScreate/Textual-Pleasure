@@ -1,4 +1,4 @@
-﻿namespace Textual_Pleasure.Model.Character.Body.ManipulateBehaviors
+﻿namespace Engine.Model.Character.Body.ManipulateBehaviors
 {
     
     // TODO: Fill out this interface -> maybe convert to strategy pattern

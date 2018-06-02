@@ -1,4 +1,4 @@
-﻿namespace Textual_Pleasure.Common
+﻿namespace Engine.Common
 {
     public interface IDescribable
     {

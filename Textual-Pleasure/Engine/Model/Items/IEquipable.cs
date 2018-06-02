@@ -1,4 +1,4 @@
-﻿namespace Textual_Pleasure.Model.Items
+﻿namespace Engine.Model.Items
 {
     public interface IEquipable
     {

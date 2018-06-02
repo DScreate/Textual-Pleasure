@@ -1,6 +1,6 @@
-﻿using Textual_Pleasure.Model.Character.Body.ManipulateBehaviors;
+﻿using Engine.Model.Character.Body.ManipulateBehaviors;
 
-namespace Textual_Pleasure.Model.Character.Body
+namespace Engine.Model.Character.Body
 {
     public class Manipulator
     {

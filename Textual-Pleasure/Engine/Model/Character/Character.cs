@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
-using Textual_Pleasure.Model.Character.Body;
+using Engine.Model.Character.Body;
 
-namespace Textual_Pleasure.Model.Character
+namespace Engine.Model.Character
 {
     public abstract class Character
     {

@@ -1,12 +1,12 @@
-﻿using Textual_Pleasure.Common;
+﻿using Engine.Common;
 
-namespace Textual_Pleasure.ViewModel
+namespace Engine.ViewModel
 {
-    public class MainWindowViewModel
+    public class GameSession
     {
         private readonly RelayCommand _clickCommand;
 
-        public MainWindowViewModel()
+        public GameSession()
         {
             _clickCommand = new RelayCommand(
                 (s) => { /* perform some action */ }, //Execute

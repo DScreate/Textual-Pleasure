@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Textual_Pleasure.Common
+namespace Engine.Common
 {
     public class RelayCommand : ICommand
     {
@@ -11,7 +11,7 @@ namespace Textual_Pleasure.Common
 
         private event EventHandler CanExecuteChangedInternal;
 
-        public RelayCommand(Action<object> execute): this(execute, DefaultCanExecute)
+        public RelayCommand(Action<object> execute): this(execute, (Predicate<object>) DefaultCanExecute)
         {
         }
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Textual_Pleasure.Model.Dice
+namespace Engine.Model.Dice
 {
     public class Die
     {

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections;
-using System.Windows.Documents;
 
-namespace Textual_Pleasure.Model.Dice
+namespace Engine.Model.Dice
 {
     public class Roller
     {

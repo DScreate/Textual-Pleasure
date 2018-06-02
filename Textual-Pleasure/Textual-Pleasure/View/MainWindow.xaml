@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Textual_Pleasure.View"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
-        xmlns:viewmodel="clr-namespace:Textual_Pleasure.ViewModel"
+        xmlns:engine="clr-namespace:Engine.ViewModel;assembly=Engine"     
+   
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
         
     </Window.Resources>
-
+        
     <Window.DataContext>
-        <viewmodel:MainWindowViewModel />
+        <engine:GameSession />
     </Window.DataContext>
     
     <Grid>
@@ -25,12 +26,12 @@
             <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="0" Background="LightBlue">Text Goes Here</TextBlock>
+        <TextBlock Grid.Column="0" Background="LightBlue" Text="{Binding Input, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBlock Grid.Row="0" Grid.Column="1" Background="LightCoral">Images And Status</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0" Background="Aquamarine"><InlineUIContainer>
-                <Button Content="Button" Width="75"/>
+                <Button Name="btn1" Content="Button" Width="75" Command="{Binding Button}"/>
             </InlineUIContainer><InlineUIContainer>
-                <Button Content="Button" Width="75"/>
+                <Button Name="btn2" Content="Button" Width="75"/>
             </InlineUIContainer><InlineUIContainer>
                 <Button Content="Button" Width="75"/>
             </InlineUIContainer></TextBlock>
