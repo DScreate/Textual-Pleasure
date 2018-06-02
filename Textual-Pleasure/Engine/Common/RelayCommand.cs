@@ -1,0 +1,67 @@
+﻿using System;
+using System.Windows.Input;
+
+namespace Engine.Common
+{
+    public class RelayCommand : ICommand
+    {
+        private Action<object> _execute;
+
+        private Predicate<object> _canExecute;
+
+        private event EventHandler CanExecuteChangedInternal;
+
+        public RelayCommand(Action<object> execute): this(execute, (Predicate<object>) DefaultCanExecute)
+        {
+        }
+
+        public RelayCommand(Action<object> execute, Predicate<object> canExecute)
+        {
+            this._execute = execute ?? throw new ArgumentNullException("execute");
+            this._canExecute = canExecute ?? throw new ArgumentNullException("canExecute");
+        }
+
+        public event EventHandler CanExecuteChanged
+        {
+            add
+            {
+                CommandManager.RequerySuggested += value;
+                this.CanExecuteChangedInternal += value;
+            }
+
+            remove
+            {
+                CommandManager.RequerySuggested -= value;
+                this.CanExecuteChangedInternal -= value;
+            }
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return this._canExecute != null && this._canExecute(parameter);
+        }
+
+        public void Execute(object parameter)
+        {
+            this._execute(parameter);
+        }
+
+        public void OnCanExecuteChanged()
+        {
+            EventHandler handler = this.CanExecuteChangedInternal;
+            //DispatcherHelper.BeginInvokeOnUIThread(() => handler.Invoke(this, EventArgs.Empty));
+            handler?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void Destroy()
+        {
+            this._canExecute = _ => false;
+            this._execute = _ => { return; };
+        }
+
+        private static bool DefaultCanExecute(object parameter)
+        {
+            return true;
+        }
+    }
+}
