@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Common\IDescribable.cs" />
     <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Model\Character\AbstractStat.cs" />
+    <Compile Include="Model\Character\BaseStat.cs" />
     <Compile Include="Model\Character\Body\BodyPart.cs" />
     <Compile Include="Model\Character\Body\IAppendage.cs" />
     <Compile Include="Model\Character\Body\ManipulateBehaviors\BluntManipulator.cs" />
@@ -50,14 +52,19 @@
     <Compile Include="Model\Character\Body\ManipulateBehaviors\IManipulate.cs" />
     <Compile Include="Model\Character\Body\Manipulator.cs" />
     <Compile Include="Model\Character\Character.cs" />
+    <Compile Include="Model\Character\DerivedStat.cs" />
     <Compile Include="Model\Dice\Die.cs" />
     <Compile Include="Model\Dice\Roller.cs" />
     <Compile Include="Model\Items\IEquipable.cs" />
     <Compile Include="Model\Items\IExternal.cs" />
     <Compile Include="Model\Items\IInternal.cs" />
     <Compile Include="Model\Items\IUsable.cs" />
+    <Compile Include="Model\Skills\BaseSkill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\GameSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\Battle\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
