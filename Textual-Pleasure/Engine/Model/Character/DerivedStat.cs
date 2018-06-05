@@ -26,9 +26,19 @@ namespace Engine.Model.Character
             }
         }
 
+        // TODO: Update this to spit out text?
         public void AddBase(BaseStat stat, double factor)
         {
 
+            if (BaseFactorDictionary.ContainsKey(stat))
+            {
+                // do something and spit out error
+                BaseFactorDictionary[stat] = factor;
+            }
+            else
+            {
+                BaseFactorDictionary.Add(stat, factor);
+            }
         }
 
     }

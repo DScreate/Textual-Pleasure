@@ -27,6 +27,10 @@ namespace Engine.Model.Character
                 
         #region Stats
 
+        public List<BaseStat> BaseStats { get; set; }
+
+        public List<DerivedStat> DerivedStats { get; set; }
+        /*
         #region Body
         public double Strength { get; set; }
         public double Body { get; set; }
@@ -50,6 +54,7 @@ namespace Engine.Model.Character
         public double Presence { get; set; }
         public double Influence { get; set; }
         #endregion
+        */
 
         
         #endregion
