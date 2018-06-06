@@ -1,4 +1,5 @@
-﻿using Engine.Model.Character.Body.ManipulateBehaviors;
+﻿using System;
+using Engine.Model.Character.Body.ManipulateBehaviors;
 
 namespace Engine.Model.Character.Body
 {
@@ -6,7 +7,19 @@ namespace Engine.Model.Character.Body
     {
         private IManipulate _manipulator;
 
-        
+        public String Name { get; set; }
+
+        public Manipulator(String name, IManipulate behavior)
+        {
+            _manipulator = behavior;
+            Name = name;
+        }
+
+        public void ChangeBehavior(IManipulate behavior)
+        {
+            _manipulator = behavior;
+        }
+
         // TODO: How does this work?
         public void Manipulate()
         {
