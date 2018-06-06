@@ -60,6 +60,8 @@
     <Compile Include="Model\Items\IInternal.cs" />
     <Compile Include="Model\Items\IUsable.cs" />
     <Compile Include="Model\Skills\BaseSkill.cs" />
+    <Compile Include="Model\Text\Parser.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\GameSession.cs" />
   </ItemGroup>
