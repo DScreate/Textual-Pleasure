@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.IO;
 using System.Runtime.CompilerServices;
 using Engine.Annotations;
 using Engine.Command;
@@ -31,6 +32,7 @@ namespace Engine.ViewModel
                 ButtonContext = new DefaultButtonContext(this);
             else
                 ButtonContext = newButtonContext;
+            StartUpLogging();
         }
 
         public void AddToDisplayText(String textIn)
@@ -46,6 +48,15 @@ namespace Engine.ViewModel
         public void ClearDisplayText()
         {
             DisplayText = "";
+        }
+
+        private void StartUpLogging()
+        {
+            FileStream filestream = new FileStream("..\\ErrorLog.log", FileMode.Append);
+            var streamwriter = new StreamWriter(filestream);
+            streamwriter.AutoFlush = true;
+            Console.SetOut(streamwriter);
+            Console.SetError(streamwriter);
         }
 
 
