@@ -1,4 +1,6 @@
-﻿namespace Textual_Pleasure.View
+﻿using Engine.ViewModel;
+
+namespace Textual_Pleasure.View
 {
   /// <summary>
   /// Interaction logic for MainWindow.xaml
@@ -8,6 +10,8 @@
     public MainWindow()
     {
       InitializeComponent();
+      GameSession session = new GameSession();
+        DataContext = session;
     }
   }
 }

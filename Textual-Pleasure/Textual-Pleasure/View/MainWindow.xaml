@@ -10,13 +10,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
-        
+
     </Window.Resources>
-        
-    <Window.DataContext>
-        <engine:GameSession />
-    </Window.DataContext>
-    
     <Grid>
         <Grid.ColumnDefinitions>     
             <ColumnDefinition Width="3*"></ColumnDefinition>
@@ -26,10 +21,17 @@
             <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="0" Background="LightBlue" Text="{Binding Input, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Grid.Column="0" Background="LightBlue" Text="{Binding DisplayText}"/>
         <TextBlock Grid.Row="0" Grid.Column="1" Background="LightCoral">Images And Status</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="0" Background="Aquamarine"><InlineUIContainer>
-                <Button Name="btn1" Content="Button" Width="75" Command="{Binding Button}"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Background="Aquamarine" DataContext="{Binding ButtonContext}"><InlineUIContainer>
+            <Button
+                Content="Button"
+                Command="{Binding ButtonCommand1}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="10,10,0,0"
+                Width="75">
+            </Button>
             </InlineUIContainer><InlineUIContainer>
                 <Button Name="btn2" Content="Button" Width="75"/>
             </InlineUIContainer><InlineUIContainer>

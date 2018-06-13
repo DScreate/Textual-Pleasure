@@ -2,13 +2,15 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Engine.Annotations;
+using Engine.Command;
 using Engine.Common;
 
 namespace Engine.ViewModel
 {
     public class GameSession : INotifyPropertyChanged
     {
-        private readonly RelayCommand _clickCommand;
+        //private readonly RelayCommand _clickCommand;
+        public AButtonContext ButtonContext { get; set; }
 
         private string _displayText;
 
@@ -17,17 +19,18 @@ namespace Engine.ViewModel
             get => _displayText;
             set
             {
-                OnPropertyChanged(nameof(DisplayText));
                 _displayText = value;
+
+                OnPropertyChanged(nameof(DisplayText));
             }
         }
 
-        public GameSession()
+        public GameSession(AButtonContext newButtonContext = null)
         {
-            _clickCommand = new RelayCommand(
-                (s) => { /* perform some action */ }, //Execute
-                (s) => { return !string.IsNullOrEmpty(_input); } //CanExecute
-            );
+            if(newButtonContext == null)
+                ButtonContext = new DefaultButtonContext(this);
+            else
+                ButtonContext = newButtonContext;
         }
 
         public void AddToDisplayText(String textIn)
@@ -45,12 +48,15 @@ namespace Engine.ViewModel
             DisplayText = "";
         }
 
+
+        /*
         public RelayCommand ButtonClickCommand
         {
-            get { return _clickCommand; }
+            //get { return _clickCommand; }
         }
 
         private string _input;
+        
         public string Input
         {
             get { return _input; }
@@ -60,7 +66,7 @@ namespace Engine.ViewModel
                 _clickCommand.OnCanExecuteChanged();
             }
         }
-
+        */
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
