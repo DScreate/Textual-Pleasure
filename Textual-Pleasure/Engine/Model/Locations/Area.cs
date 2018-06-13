@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Engine.Common;
 
 namespace Engine.Model.Locations
 {
-    public class Area
+    public class Area : IDescribable
     {
         public string Name { get; set; }
         public string Description { get; set; }

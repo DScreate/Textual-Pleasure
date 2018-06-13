@@ -1,13 +1,24 @@
-﻿using Engine.Model.Items.Behaviors;
+﻿using Engine.Common;
+using Engine.Model.Items.Behaviors;
 
 namespace Engine.Model.Items
 {
-    public class AItem
+    public class AItem : IDescribable
     {
-        public string Name { get; set; } 
-        public AItem(string name)
+
+        public int ItemID { get; set; }
+        public string Name { get; set; }
+        public int Price { get; set; }
+        public int Level { get; set; }
+
+        public AItem(int Id, string name, int price, int level = 1)
         {
+            ItemID = Id;
             Name = name;
+            Price = price;
+            Level = level;
         }
+
+        public string Description { get; set; }
     }
 }

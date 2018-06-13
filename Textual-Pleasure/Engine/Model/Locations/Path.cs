@@ -1,6 +1,8 @@
-﻿namespace Engine.Model.Locations
+﻿using Engine.Common;
+
+namespace Engine.Model.Locations
 {
-    public class Path
+    public class Path : IDescribable
     {
         public double CostToTravel { get; set; }
 

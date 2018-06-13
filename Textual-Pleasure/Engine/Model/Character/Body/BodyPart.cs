@@ -2,7 +2,7 @@
 
 namespace Engine.Model.Character.Body
 {
-    public abstract class BodyPart
+    public abstract class BodyPart : IEquatable<BodyPart>
     {
         public string Name { get; set; }
         public double Weight { get; set; }
@@ -26,9 +26,38 @@ namespace Engine.Model.Character.Body
         public bool AddManipulator(Manipulator inMan)
         {
             if (Manip == null)
+            {
                 Manip = inMan;
+
+            }
             return true;
         }
 
+        public bool Equals(BodyPart other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return string.Equals(Name, other.Name) && Weight.Equals(other.Weight) && ControversialLevel == other.ControversialLevel && Equals(Manip, other.Manip);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((BodyPart) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = (Name != null ? Name.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ Weight.GetHashCode();
+                hashCode = (hashCode * 397) ^ ControversialLevel;
+                hashCode = (hashCode * 397) ^ (Manip != null ? Manip.GetHashCode() : 0);
+                return hashCode;
+            }
+        }
     }
 }

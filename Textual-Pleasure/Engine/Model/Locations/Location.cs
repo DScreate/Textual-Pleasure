@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Engine.Common;
 using Engine.Model.Items;
 using Engine.Model.Character;
 
 namespace Engine.Model.Locations
 {
-    public class Location
+    public class Location : IDescribable
     {
         public string Name { get; set; }
         public string Description { get; set; }

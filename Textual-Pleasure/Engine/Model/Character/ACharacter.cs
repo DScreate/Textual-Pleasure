@@ -67,6 +67,17 @@ namespace Engine.Model.Character
 
         #region Stats
 
+        // TODO : Possible error state if stat does not exit in basestats?
+        public BaseStat GetBaseStat(BaseStat stat)
+        {
+            return BaseStats.Find(statToFind => statToFind.Name == stat.Name)  
+        }
+
+        public DerivedStat GetDerivedStat(DerivedStat stat)
+        {
+            return DerivedStats.Find(statToFind => statToFind.Name == stat.Name)
+        }
+
         public List<BaseStat> BaseStats { get; set; }
 
         public List<DerivedStat> DerivedStats { get; set; }

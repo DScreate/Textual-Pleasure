@@ -64,6 +64,9 @@
     <Compile Include="Model\Dice\Die.cs" />
     <Compile Include="Model\Dice\Roller.cs" />
     <Compile Include="Model\Items\AItem.cs" />
+    <Compile Include="Model\Items\Behaviors\EquipBehaviors\EquipArmorDefault.cs" />
+    <Compile Include="Model\Items\Behaviors\EquipBehaviors\EquipRequirements.cs" />
+    <Compile Include="Model\Items\Behaviors\EquipBehaviors\EquipWeaponDefault.cs" />
     <Compile Include="Model\Items\Behaviors\IEquipable.cs" />
     <Compile Include="Model\Items\Behaviors\IExternal.cs" />
     <Compile Include="Model\Items\Behaviors\IInternal.cs" />
@@ -81,7 +84,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\Battle\" />
-    <Folder Include="Model\Items\Behaviors\EquipBehaviors\" />
     <Folder Include="Model\Items\Behaviors\ExternalBehaviors\" />
     <Folder Include="Model\Items\Behaviors\InternalBehaviors\" />
     <Folder Include="Model\Items\Behaviors\UseBehaviors\" />
