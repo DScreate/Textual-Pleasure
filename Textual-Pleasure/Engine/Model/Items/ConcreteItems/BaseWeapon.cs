@@ -8,6 +8,8 @@ namespace Engine.Model.Items.ConcreteItems
     {
         public BaseWeapon(int Id, string name, int price, int level = 1, Dictionary<string, float> equipEffects = null, List<BodyPart> targets = null) : base(Id, name, price, level, equipEffects, targets)
         {
+            EquipEffects.Add("Strength", 1*level);
+            TargetBodyParts.Add(new Arm());
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Engine.Model.Character.Body;
+using Engine.Model.Locations;
 
 namespace Engine.Model.Character
 {
@@ -13,6 +14,28 @@ namespace Engine.Model.Character
             AddBodyPart(Leg.LegFactory(false));
             AddBodyPart(Torso.TorsoFactory());
             AddBodyPart(Head.HeadFactory());
+        }
+
+        private Location _home;
+        public Location Home
+        {
+            get => _home;
+            set
+            {
+                _home = value;
+                OnPropertyChanged(nameof(Home));
+            }
+        }
+
+        public void ReturnToHome()
+        {
+            CurrentLocation = Home;
+        }
+
+        public void ReturnToHomeAndHeal()
+        {
+            CurrentHealth = MaxHealth;
+            CurrentEndurance = MaxEndurance;
         }
     }
 }

@@ -6,6 +6,8 @@ using Engine.Annotations;
 using Engine.Command;
 using Engine.Common;
 using Engine.Model.Character;
+using Engine.Model.Factories;
+using Engine.Model.Items.ConcreteItems;
 
 namespace Engine.ViewModel
 {
@@ -36,7 +38,6 @@ namespace Engine.ViewModel
             CurrentPlayer.Experience = 0;
             CurrentPlayer.Level = 1;
             CurrentPlayer.Gold = 10;
-            
         }
 
         public void AddToDisplayText(String textIn)

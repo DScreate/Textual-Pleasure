@@ -1,8 +1,9 @@
-﻿using Engine.Common;
+﻿using System;
+using Engine.Common;
 
 namespace Engine.Model.Items
 {
-    public class AItem : IDescribable
+    public class AItem : IDescribable, ICloneable
     {
 
         public int ItemID { get; set; }
@@ -19,5 +20,9 @@ namespace Engine.Model.Items
         }
 
         public string Description { get; set; }
+        public virtual object Clone()
+        {
+            return new AItem(ItemID, Name, Price, Level);
+        }
     }
 }

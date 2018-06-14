@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Engine.Model.Character;
 using Engine.Model.Character.Body;
+using Engine.Model.Factories;
 using Engine.Model.Items.ConcreteItems;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -89,6 +90,30 @@ namespace Windows.UnitTests
             GC.AddEquipment(BE2);
 
             Assert.AreEqual(5, GC.myStats.Strength.Value);
+        }
+
+        [TestMethod]
+        public void TestWeaponFactory()
+        {
+            BaseWeapon BW = ItemFactory.CreateWeapon(1);
+
+            Assert.IsInstanceOfType(BW, typeof(BaseWeapon));
+        }
+
+        [TestMethod]
+        public void TestWeaponFactoryNameLevel1()
+        {
+            BaseWeapon BW = ItemFactory.CreateWeapon(1);
+
+            Assert.AreEqual("Wood Sword", BW.Name);
+        }
+
+        [TestMethod]
+        public void TestWeaponFactorySpecialNameLevel1()
+        {
+            BaseWeapon BW = ItemFactory.CreateWeapon(1, true, true);
+
+            Assert.AreEqual("Elderwood Sword", BW.Name);
         }
     }
 }

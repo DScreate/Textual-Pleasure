@@ -30,6 +30,7 @@ namespace Engine.Model.Locations
             if (Paths.Contains(newPath))
             {
                 // do something?
+                Console.WriteLine("Trying to add already existing path " + newPath + " to " + Name);
             }
             else
             {

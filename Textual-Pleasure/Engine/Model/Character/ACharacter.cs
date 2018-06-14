@@ -8,6 +8,7 @@ using Engine.Annotations;
 using Engine.Model.Character.Body;
 using Engine.Model.Items.Behaviors;
 using Engine.Model.Items.ConcreteItems;
+using Engine.Model.Locations;
 
 namespace Engine.Model.Character
 {
@@ -23,12 +24,54 @@ namespace Engine.Model.Character
             if(BodyParts == null)
                 BodyParts = new Dictionary<string, BodyPart>();
             myStats = Stats.StatsFactory();
+
+            CurrentHealth = MaxHealth;
+            CurrentEndurance = MaxEndurance;
             GenerateHash();
         }
 
-        public int Health => (int)myStats.Health.Value;
+        private Location _curLocation;
 
-        public int Endurance => (int)myStats.Endurance.Value;
+        public Location CurrentLocation
+        {
+            get => _curLocation;
+            set
+            {
+                _curLocation = value;
+                OnPropertyChanged(nameof(CurrentLocation));
+            }
+        }
+
+        public void PlaceAtLocation(Location loc)
+        {
+            CurrentLocation = loc;
+        }
+
+        private int _curHealth;
+        public int CurrentHealth
+        {
+            get => _curHealth;
+            set
+            {
+                _curHealth = value > MaxHealth ? MaxHealth : value;
+                OnPropertyChanged(nameof(CurrentHealth));
+            }
+        }
+
+        private int _curEndurance;
+        public int CurrentEndurance
+        {
+            get => _curEndurance;
+            set
+            {
+                _curEndurance = value > MaxEndurance ? MaxEndurance : value;
+                OnPropertyChanged(nameof(CurrentEndurance));
+            }
+        }
+
+        public int MaxHealth => (int)myStats.Health.Value;
+
+        public int MaxEndurance => (int)myStats.Endurance.Value;
 
         private string _name;
         public string Name
@@ -73,6 +116,16 @@ namespace Engine.Model.Character
                 _gold = value;
                 OnPropertyChanged(nameof(Gold));
             }
+        }
+
+        public double StrengthAttackPower
+        {
+            get => (int)myStats.StrengthMeleeDamage.Value;
+        }
+
+        public double AgilityAttackPower
+        {
+            get => (int) myStats.AgilityMeleeDamage.Value;
         }
 
         public Dictionary<string, ACharacter> KnownCharacters { get; set; }
@@ -199,7 +252,7 @@ namespace Engine.Model.Character
         {
             if (BodyParts.ContainsKey(part.ToString())) return false;
             
-            BodyParts.Add(part.ToString(), part);
+            BodyParts.Add(part.Name, part);
             return true;
         }
         

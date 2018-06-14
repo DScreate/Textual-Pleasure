@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using Engine.Model.Character.Body.ManipulateBehaviors;
 
 namespace Engine.Model.Character.Body
@@ -17,12 +18,12 @@ namespace Engine.Model.Character.Body
             if (isLeft)
             {
                 temp.Manip.Name = "Left Hand";
-                temp.Manip.Name = "Left Arm";
+                temp.Name = "Left Arm";
             }
             else
             {
                 temp.Manip.Name = "Right Hand";
-                temp.Manip.Name = "Right Arm";
+                temp.Name = "Right Arm";
             }
 
             return temp;

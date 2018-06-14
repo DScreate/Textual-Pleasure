@@ -16,13 +16,13 @@ namespace Engine.Model.Character.Body
                 Leg temp = new Leg();
                 if (isLeft)
                 {
-                    temp.Manip.Name = "Left Leg";
-                    temp.Manip.Name = "Left Leg";
+                    temp.Manip.Name = "Left Foot";
+                    temp.Name = "Left Leg";
                 }
                 else
                 {
-                    temp.Manip.Name = "Right Leg";
-                    temp.Manip.Name = "Right Leg";
+                    temp.Manip.Name = "Right Fppt";
+                    temp.Name = "Right Leg";
                 }
 
                 return temp;
