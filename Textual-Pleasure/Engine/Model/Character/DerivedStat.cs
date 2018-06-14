@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Engine.Model.Character
 {
     public class DerivedStat : AbstractStat
     {
-        public Dictionary<BaseStat, double> BaseFactorDictionary;
+        public Dictionary<AbstractStat, double> StatFactorDictionary;
 
-        public DerivedStat(string inName, BaseStat baseStat, double factor) : base (inName)
+        public DerivedStat(string inName, Dictionary<AbstractStat, double> factorDictionary) : base (inName)
         {
-            BaseFactorDictionary.Add(baseStat, factor);
+            StatFactorDictionary = factorDictionary;
         }
 
         public new double Value
@@ -16,9 +17,9 @@ namespace Engine.Model.Character
             get
             {
                 double temp = 0;
-                foreach (KeyValuePair<BaseStat, double> entry in BaseFactorDictionary)
+                foreach (KeyValuePair<AbstractStat, double> entry in StatFactorDictionary)
                 {
-                    BaseStat stat = entry.Key;
+                    AbstractStat stat = entry.Key;
                     temp += stat.Value * entry.Value;
                 }
 
@@ -27,17 +28,18 @@ namespace Engine.Model.Character
         }
 
         // TODO: Update this to spit out text?
-        public void AddBase(BaseStat stat, double factor)
+        public void AddBase(AbstractStat stat, double factor)
         {
 
-            if (BaseFactorDictionary.ContainsKey(stat))
+            if (StatFactorDictionary.ContainsKey(stat))
             {
                 // do something and spit out error
-                BaseFactorDictionary[stat] = factor;
+                StatFactorDictionary[stat] = factor;
+                Console.WriteLine("Error in adding base to Derived stat:\nBase: " + stat.Name + ", Derived: " + Name);
             }
             else
             {
-                BaseFactorDictionary.Add(stat, factor);
+                StatFactorDictionary.Add(stat, factor);
             }
         }
 

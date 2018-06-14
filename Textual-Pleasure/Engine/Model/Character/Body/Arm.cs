@@ -6,7 +6,7 @@ namespace Engine.Model.Character.Body
     public class Arm : BodyPart, IAppendage
     {
         // TODO : Implement Left vs Right Arm
-        private Arm() : base("Arm", 8.0, 0, new Manipulator("Hand", new FineManipulator()))
+        public Arm() : base("Arm", 8.0, 0, new Manipulator("Hand", new FineManipulator()))
         {
 
         }

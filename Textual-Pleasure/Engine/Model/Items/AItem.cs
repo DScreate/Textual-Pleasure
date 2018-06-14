@@ -1,5 +1,4 @@
 ﻿using Engine.Common;
-using Engine.Model.Items.Behaviors;
 
 namespace Engine.Model.Items
 {

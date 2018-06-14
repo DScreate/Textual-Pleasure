@@ -9,11 +9,13 @@
    
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+
+
     <Window.Resources>
 
     </Window.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>     
+        <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"></ColumnDefinition>
             <ColumnDefinition Width="1.5*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
@@ -22,7 +24,44 @@
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Background="LightBlue" Text="{Binding DisplayText}"/>
-        <TextBlock Grid.Row="0" Grid.Column="1" Background="LightCoral">Images And Status</TextBlock>
+
+        <!-- The Right-Most Upper section used to Display Information -->
+        <Grid Grid.Row="0" Grid.Column="1" Background="LightCoral">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Name:"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding CurrentPlayer.Name}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Class:"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding CurrentPlayer.Id}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Health:"/>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding CurrentPlayer.Health}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Endurance:"/>
+            <Label Grid.Row="3" Grid.Column="1" Content="{Binding CurrentPlayer.Endurance}"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="Gold:"/>
+            <Label Grid.Row="4" Grid.Column="1" Content="{Binding CurrentPlayer.Gold}"/>
+            <Label Grid.Row="5" Grid.Column="0" Content="XP:"/>
+            <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Experience}"/>
+            <Label Grid.Row="6" Grid.Column="0" Content="Level:"/>
+            <Label Grid.Row="6" Grid.Column="1" Content="{Binding CurrentPlayer.Level}"/>
+        </Grid>
+        
+        
+        
         <TextBlock Grid.Row="1" Grid.Column="0" Background="Aquamarine" DataContext="{Binding ButtonContext}"><InlineUIContainer>
             <Button
                 Content="Button"

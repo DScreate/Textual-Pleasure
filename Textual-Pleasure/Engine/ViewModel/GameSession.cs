@@ -5,12 +5,14 @@ using System.Runtime.CompilerServices;
 using Engine.Annotations;
 using Engine.Command;
 using Engine.Common;
+using Engine.Model.Character;
 
 namespace Engine.ViewModel
 {
     public class GameSession : INotifyPropertyChanged
     {
         //private readonly RelayCommand _clickCommand;
+        public ACharacter CurrentPlayer { get; set; }
         public AButtonContext ButtonContext { get; set; }
 
         private string _displayText;
@@ -26,13 +28,15 @@ namespace Engine.ViewModel
             }
         }
 
-        public GameSession(AButtonContext newButtonContext = null)
+        public GameSession()
         {
-            if(newButtonContext == null)
-                ButtonContext = new DefaultButtonContext(this);
-            else
-                ButtonContext = newButtonContext;
             StartUpLogging();
+            ButtonContext = new DefaultButtonContext(this);
+            CurrentPlayer = new PlayerCharacter("Vanessa");
+            CurrentPlayer.Experience = 0;
+            CurrentPlayer.Level = 1;
+            CurrentPlayer.Gold = 10;
+            
         }
 
         public void AddToDisplayText(String textIn)
@@ -51,8 +55,8 @@ namespace Engine.ViewModel
         }
 
         private void StartUpLogging()
-        {
-            FileStream filestream = new FileStream("..\\ErrorLog.log", FileMode.Append);
+        {            
+            FileStream filestream = File.Open("..\\ErrorLog.log", FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
             var streamwriter = new StreamWriter(filestream);
             streamwriter.AutoFlush = true;
             Console.SetOut(streamwriter);

@@ -1,26 +1,125 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
+using Engine.Annotations;
 using Engine.Model.Character.Body;
+using Engine.Model.Items.Behaviors;
+using Engine.Model.Items.ConcreteItems;
 
 namespace Engine.Model.Character
 {
-    public abstract class ACharacter
+    public abstract class ACharacter : INotifyPropertyChanged
     {
         protected ACharacter(string name, Dictionary<string, ACharacter> knownCharacters = null, Dictionary<string, BodyPart> bodyParts = null)
         {
             Name = name;
             KnownCharacters = knownCharacters;
+            if(KnownCharacters == null)
+                KnownCharacters = new Dictionary<string, ACharacter>();
             BodyParts = bodyParts;
+            if(BodyParts == null)
+                BodyParts = new Dictionary<string, BodyPart>();
+            myStats = Stats.StatsFactory();
             GenerateHash();
         }
 
-        public string Name { get; set; }
+        public int Health => (int)myStats.Health.Value;
+
+        public int Endurance => (int)myStats.Endurance.Value;
+
+        private string _name;
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                _name = value;
+                OnPropertyChanged(nameof(Name));
+            }
+        }
+
+        private int _level;
+        public int Level
+        {
+            get => _level;
+            set
+            {
+                _level = value;
+                OnPropertyChanged(nameof(Level));
+            }
+        }
+
+        private int _experience;
+        public int Experience
+        {
+            get => _experience;
+            set
+            {
+                _experience = value;
+                OnPropertyChanged(nameof(Experience));
+            }
+        }
+
+        private int _gold;
+
+        public int Gold
+        {
+            get => _gold;
+            set
+            {
+                _gold = value;
+                OnPropertyChanged(nameof(Gold));
+            }
+        }
 
         public Dictionary<string, ACharacter> KnownCharacters { get; set; }
 
         public Dictionary<string, BodyPart> BodyParts { get; set; }
+
+        public Stats myStats { get; set; }
+
+        public bool AddEquipment(BaseEquipable equipable)
+        {
+            foreach (BodyPart part in equipable.TargetBodyParts)
+            {
+                if (equipable.Exclusive)
+                {
+                    foreach (BaseEquipable subEquipable in BodyParts[part.Name].Equipables)
+                    {
+                        if (!subEquipable.CanUnequip(this))
+                        {
+                            return false;
+                        } else if (subEquipable.ItemID == equipable.ItemID)
+                        {
+
+                        } else
+                        {
+                            BodyParts[part.Name].Equipables.Remove(subEquipable);
+                            subEquipable.OnUnEquip(this);
+                        }
+                    }
+                }
+
+                part.Equipables.Add(equipable);
+                equipable.OnEquip(this);
+            }
+
+            return true;
+        }
+
+        public bool RemoveEquipment(BaseEquipable equipable)
+        {
+            foreach (BodyPart part in equipable.TargetBodyParts)
+            { 
+                part.Equipables.Remove(equipable);
+                equipable.OnUnEquip(this);
+            }
+
+            return true;
+        }
         
         // TODO: Fix Id checking! Why is there Idnum AND Id?
         public string Id { get; set; }
@@ -70,44 +169,27 @@ namespace Engine.Model.Character
         // TODO : Possible error state if stat does not exit in basestats?
         public BaseStat GetBaseStat(BaseStat stat)
         {
-            return BaseStats.Find(statToFind => statToFind.Name == stat.Name)  
+            return (BaseStat)myStats.GetType().GetProperty(stat.Name).GetValue(myStats, null);
+        }
+
+        public BaseStat GetBaseStat(string statName)
+        {
+            return (BaseStat)myStats.GetType().GetProperty(statName).GetValue(myStats, null);
         }
 
         public DerivedStat GetDerivedStat(DerivedStat stat)
         {
-            return DerivedStats.Find(statToFind => statToFind.Name == stat.Name)
+            return (DerivedStat)myStats.GetType().GetProperty(stat.Name).GetValue(myStats, null);
         }
 
-        public List<BaseStat> BaseStats { get; set; }
+        public DerivedStat GetDerivedStat(string statName)
+        {
+            return (DerivedStat)myStats.GetType().GetProperty(statName).GetValue(myStats, null);
+        }
 
-        public List<DerivedStat> DerivedStats { get; set; }
-        /*
-        #region Body
-        public double Strength { get; set; }
-        public double Body { get; set; }
-        public double Health { get; set; }
-        #endregion
 
-        #region Mental
-        public double Mind { get; set; }
-        public double Will { get; set; }
-        public double Resolve { get; set; }
-        #endregion
-        
-        #region Speed
-        public double Agility { get; set; }
-        public double Reflex { get; set; }
-        public double Coordination { get; set; }
-        #endregion
 
-        #region Social
-        public double Charisma { get; set; }
-        public double Presence { get; set; }
-        public double Influence { get; set; }
-        #endregion
-        */
 
-        
         #endregion
 
         #region BodyControl
@@ -174,5 +256,12 @@ namespace Engine.Model.Character
 
         #endregion
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

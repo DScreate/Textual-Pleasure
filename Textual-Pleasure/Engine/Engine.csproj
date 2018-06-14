@@ -60,17 +60,19 @@
     <Compile Include="Model\Character\Body\Torso.cs" />
     <Compile Include="Model\Character\ACharacter.cs" />
     <Compile Include="Model\Character\DerivedStat.cs" />
-    <Compile Include="Model\Character\GenericACharacter.cs" />
+    <Compile Include="Model\Character\GenericCharacter.cs" />
+    <Compile Include="Model\Character\PlayerCharacter.cs" />
+    <Compile Include="Model\Character\Stats.cs" />
     <Compile Include="Model\Dice\Die.cs" />
     <Compile Include="Model\Dice\Roller.cs" />
     <Compile Include="Model\Items\AItem.cs" />
-    <Compile Include="Model\Items\Behaviors\EquipBehaviors\EquipArmorDefault.cs" />
-    <Compile Include="Model\Items\Behaviors\EquipBehaviors\EquipRequirements.cs" />
-    <Compile Include="Model\Items\Behaviors\EquipBehaviors\EquipWeaponDefault.cs" />
+    <Compile Include="Model\Items\ConcreteItems\BaseEquipable.cs" />
+    <Compile Include="Model\Items\ConcreteItems\EquipRequirements.cs" />
     <Compile Include="Model\Items\Behaviors\IEquipable.cs" />
     <Compile Include="Model\Items\Behaviors\IExternal.cs" />
     <Compile Include="Model\Items\Behaviors\IInternal.cs" />
     <Compile Include="Model\Items\Behaviors\IUsable.cs" />
+    <Compile Include="Model\Items\ConcreteItems\BaseWeapon.cs" />
     <Compile Include="Model\Locations\Area.cs" />
     <Compile Include="Model\Locations\Location.cs" />
     <Compile Include="Model\Locations\Path.cs" />
@@ -84,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\Battle\" />
+    <Folder Include="Model\Items\Behaviors\EquipBehaviors\" />
     <Folder Include="Model\Items\Behaviors\ExternalBehaviors\" />
     <Folder Include="Model\Items\Behaviors\InternalBehaviors\" />
     <Folder Include="Model\Items\Behaviors\UseBehaviors\" />

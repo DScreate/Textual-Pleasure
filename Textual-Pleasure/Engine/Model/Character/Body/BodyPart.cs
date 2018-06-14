@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Net.Mail;
+using Engine.Model.Items.Behaviors;
 
 namespace Engine.Model.Character.Body
 {
@@ -6,6 +9,8 @@ namespace Engine.Model.Character.Body
     {
         public string Name { get; set; }
         public double Weight { get; set; }
+
+        public List<IEquipable> Equipables;
 
 
         public int ControversialLevel { get; set; }
@@ -19,7 +24,29 @@ namespace Engine.Model.Character.Body
             Weight = weight;
             ControversialLevel = conLevel;
             Manip = inMan;
+            Equipables = new List<IEquipable>();
         }
+
+        /*
+        public bool AddEquipment(IEquipable equipable)
+        {
+            if (equipable.Exclusive)
+            {
+                foreach (IEquipable equipment in Equipables)
+                {
+
+                }
+            }
+
+            if (equipable.RequiresManip && Manip != null)
+            {
+                Equipables.Add(equipable);
+                return true;
+            }
+
+            return false;
+        }
+        */
 
 
         // TODO FIX THIS

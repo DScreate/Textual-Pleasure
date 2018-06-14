@@ -31,7 +31,7 @@ namespace Engine.Model.Character
         // TODO : Implement this
         public override int GetHashCode()
         {
-            throw new NotImplementedException();
+            return (int)Value;
         }
 
         public static bool operator ==(BaseStat left, BaseStat right)

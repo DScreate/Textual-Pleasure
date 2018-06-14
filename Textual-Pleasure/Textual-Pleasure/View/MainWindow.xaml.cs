@@ -7,11 +7,13 @@ namespace Textual_Pleasure.View
   /// </summary>
   public partial class MainWindow
   {
+    private GameSession session;
+    
     public MainWindow()
     {
       InitializeComponent();
-      GameSession session = new GameSession();
-        DataContext = session;
+      session = new GameSession();
+      DataContext = session;
     }
   }
 }
