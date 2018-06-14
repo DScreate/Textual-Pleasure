@@ -8,9 +8,11 @@ namespace Engine.Model.Locations
     {
         private List<Location> _locations = new List<Location>();
 
-        internal void CreateLocationAtPoint(int XCoord, int yCoord, int dangerLevel)
+        internal void CreateLocationAtPoint(int XCoord, int YCoord, int dangerLevel)
         {
             Location loc = LocationFactory.CreateLocation(dangerLevel);
+            loc.XCoordinate = XCoord;
+            loc.YCoordinate = YCoord;
             _locations.Add(loc);
         }
 

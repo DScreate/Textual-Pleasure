@@ -19,7 +19,25 @@ namespace Engine.ViewModel
         public AButtonContext ButtonContext { get; set; }
         public SmallWorld CurrentWorld { get; set; }
 
-        public Location CurrentLocation { get; set; }
+        private Location _currentLocation;
+
+        public Location CurrentLocation
+        {
+            get => _currentLocation;
+            set
+            {
+                _currentLocation = value;
+                OnPropertyChanged(nameof(CurrentLocation));
+
+
+                OnPropertyChanged(nameof(HasLocationToNorth));
+                OnPropertyChanged(nameof(HasLocationToEast));
+                OnPropertyChanged(nameof(HasLocationToWest));
+                OnPropertyChanged(nameof(HasLocationToSouth));
+            }
+        }
+
+        private SmallWorldFactory factory;
 
         private string _displayText;
 
@@ -37,16 +55,21 @@ namespace Engine.ViewModel
         public GameSession()
         {
             StartUpLogging();
-            ButtonContext = new DefaultButtonContext(this);
+
+            factory = new SmallWorldFactory();
+            CurrentWorld = factory.CreateWorld(0, 0);
+
+            CurrentLocation = CurrentWorld.LocationAt(0, 0);
+            //factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
+
+
+            ButtonContext = new ExploreButtonContext(this);
             CurrentPlayer = new PlayerCharacter("Vanessa");
             CurrentPlayer.Experience = 0;
             CurrentPlayer.Level = 1;
             CurrentPlayer.Gold = 10;
 
-            SmallWorldFactory factory = new SmallWorldFactory();
-            CurrentWorld = factory.CreateWorld();
 
-            CurrentLocation = CurrentWorld.LocationAt(0, 0);
         }
 
         public void AddToDisplayText(String textIn)
@@ -77,21 +100,28 @@ namespace Engine.ViewModel
         public void MoveNorth()
         {
             CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate + 1);
+            factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
         }
 
         public void MoveEast()
         {
             CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate + 1, CurrentLocation.YCoordinate);
+            factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
+
         }
 
         public void MoveSouth()
         {
             CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate - 1);
+            factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
+
         }
 
         public void MoveWest()
         {
             CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate - 1, CurrentLocation.YCoordinate);
+            factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
+
         }
 
         public bool HasLocationToNorth
@@ -123,6 +153,16 @@ namespace Engine.ViewModel
             get
             {
                 return CurrentWorld.LocationAt(CurrentLocation.XCoordinate - 1, CurrentLocation.YCoordinate) != null;
+            }
+        }
+
+        public void DescribeLocation()
+        {
+            Location loc = CurrentLocation;
+            AddToDisplayText("Looking at the " + loc.Name + ", you can see that ");
+            foreach (ACharacter character in loc.Characters)
+            {
+                AddToDisplayText(character.Name + " is here\n");
             }
         }
 

@@ -20,7 +20,7 @@ namespace Engine.Model.Locations
 
         public List<Path> Paths;
 
-        private List<ACharacter> Characters { get; set; }
+        public List<ACharacter> Characters { get; set; }
 
         public List<AItem> Items { get; set; }
 

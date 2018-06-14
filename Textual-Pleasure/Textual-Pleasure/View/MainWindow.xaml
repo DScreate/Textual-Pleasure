@@ -12,7 +12,7 @@
 
 
     <Window.Resources>
-
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility" />
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -88,6 +88,9 @@
                 Grid.Column="0"
                 Content="{Binding ButtonContent1}"
                 Command="{Binding ButtonCommand1}"
+                IsEnabled="{Binding ButtonEnabled1, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled1, Converter={StaticResource BooleanToVisibility}}"
+
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"
@@ -102,6 +105,8 @@
                 Grid.Column="1"
                 Content="{Binding ButtonContent2}"
                 Command="{Binding ButtonCommand2}"
+                IsEnabled="{Binding ButtonEnabled2, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled2, Converter={StaticResource BooleanToVisibility}}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"
@@ -116,6 +121,8 @@
                 Grid.Column="2"
                 Content="{Binding ButtonContent3}"
                 Command="{Binding ButtonCommand3}"
+                IsEnabled="{Binding ButtonEnabled3, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled3, Converter={StaticResource BooleanToVisibility}}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"
@@ -130,6 +137,8 @@
                 Grid.Column="3"
                 Content="{Binding ButtonContent4}"
                 Command="{Binding ButtonCommand4}"
+                IsEnabled="{Binding ButtonEnabled4, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled4, Converter={StaticResource BooleanToVisibility}}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"
@@ -144,6 +153,8 @@
                 Grid.Column="4"
                 Content="{Binding ButtonContent5}"
                 Command="{Binding ButtonCommand5}"
+                IsEnabled="{Binding ButtonEnabled5, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled5, Converter={StaticResource BooleanToVisibility}}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"
@@ -158,6 +169,8 @@
                 Grid.Column="0"
                 Content="{Binding ButtonContent6}"
                 Command="{Binding ButtonCommand6}"
+                IsEnabled="{Binding ButtonEnabled6, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled6, Converter={StaticResource BooleanToVisibility}}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"
@@ -172,6 +185,8 @@
                 Grid.Column="1"
                 Content="{Binding ButtonContent7}"
                 Command="{Binding ButtonCommand7}"
+                IsEnabled="{Binding ButtonEnabled7, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled7, Converter={StaticResource BooleanToVisibility}}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"
@@ -186,6 +201,8 @@
                 Grid.Column="2"
                 Content="{Binding ButtonContent8}"
                 Command="{Binding ButtonCommand8}"
+                IsEnabled="{Binding ButtonEnabled8, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled8, Converter={StaticResource BooleanToVisibility}}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"
@@ -200,6 +217,8 @@
                 Grid.Column="3"
                 Content="{Binding ButtonContent9}"
                 Command="{Binding ButtonCommand9}"
+                IsEnabled="{Binding ButtonEnabled9, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled9, Converter={StaticResource BooleanToVisibility}}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"
@@ -214,6 +233,8 @@
                 Grid.Column="4"
                 Content="{Binding ButtonContent10}"
                 Command="{Binding ButtonCommand10}"
+                IsEnabled="{Binding ButtonEnabled10, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled10, Converter={StaticResource BooleanToVisibility}}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"

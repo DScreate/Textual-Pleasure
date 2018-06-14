@@ -1,9 +1,12 @@
-﻿using System.Windows.Input;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Engine.Annotations;
 using Engine.Command;
 
 namespace Engine.ViewModel
 {
-    public abstract class AButtonContext
+    public abstract class AButtonContext : INotifyPropertyChanged
     {
 
         private GameSession _session;
@@ -42,6 +45,109 @@ namespace Engine.ViewModel
         public string ButtonContent8 { get; set; }
         public string ButtonContent9 { get; set; }
         public string ButtonContent10 { get; set; }
+
+        private bool _buttonEnabled1;
+        private bool _buttonEnabled2;
+        private bool _buttonEnabled3;
+        private bool _buttonEnabled4;
+        private bool _buttonEnabled5;
+        private bool _buttonEnabled6;
+        private bool _buttonEnabled7;
+        private bool _buttonEnabled8;
+        private bool _buttonEnabled9;
+        private bool _buttonEnabled10;
+
+        public bool ButtonEnabled1
+        {
+            get => _buttonEnabled1;
+            set
+            {
+                _buttonEnabled1 = value;
+                OnPropertyChanged(nameof(ButtonEnabled1));
+            }
+        }
+        public bool ButtonEnabled2
+        {
+            get => _buttonEnabled2;
+            set
+            {
+                _buttonEnabled2 = value;
+                OnPropertyChanged(nameof(ButtonEnabled2));
+            }
+        }
+        public bool ButtonEnabled3
+        {
+            get => _buttonEnabled3;
+            set
+            {
+                _buttonEnabled3 = value;
+                OnPropertyChanged(nameof(ButtonEnabled3));
+            }
+        }
+        public bool ButtonEnabled4
+        {
+            get => _buttonEnabled4;
+            set
+            {
+                _buttonEnabled4 = value;
+                OnPropertyChanged(nameof(ButtonEnabled4));
+            }
+        }
+        public bool ButtonEnabled5
+        {
+            get => _buttonEnabled5;
+            set
+            {
+                _buttonEnabled5 = value;
+                OnPropertyChanged(nameof(ButtonEnabled5));
+            }
+        }
+        public bool ButtonEnabled6
+        {
+            get => _buttonEnabled6;
+            set
+            {
+                _buttonEnabled6 = value;
+                OnPropertyChanged(nameof(ButtonEnabled6));
+            }
+        }
+        public bool ButtonEnabled7
+        {
+            get => _buttonEnabled7;
+            set
+            {
+                _buttonEnabled7 = value;
+                OnPropertyChanged(nameof(ButtonEnabled7));
+            }
+        }
+        public bool ButtonEnabled8
+        {
+            get => _buttonEnabled8;
+            set
+            {
+                _buttonEnabled8 = value;
+                OnPropertyChanged(nameof(ButtonEnabled8));
+            }
+        }
+        public bool ButtonEnabled9
+        {
+            get => _buttonEnabled9;
+            set
+            {
+                _buttonEnabled9 = value;
+                OnPropertyChanged(nameof(ButtonEnabled9));
+            }
+        }
+        public bool ButtonEnabled10
+        {
+            get => _buttonEnabled10;
+            set
+            {
+                _buttonEnabled10 = value;
+                OnPropertyChanged(nameof(ButtonEnabled10));
+            }
+        }
+
 
 
         // A holder class that contains methods to define behaviors for each button
@@ -173,5 +279,12 @@ namespace Engine.ViewModel
             );
         }
         // Some kind of additional functionality for having certain actions have their own button?
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
