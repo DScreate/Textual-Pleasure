@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Reflection;
+using System.Runtime.CompilerServices;
+using Engine.Annotations;
 
 namespace Engine.Model.Character
 {
-    public class Stats
+    public class Stats : INotifyPropertyChanged
     {
         public BaseStat Strength { get; set; }
 
@@ -35,12 +38,38 @@ namespace Engine.Model.Character
         //public DerivedStat Awareness { get; set; }
 
         //public DerivedStat Influence { get; set; }
+        private DerivedStat _strMeleeDamage;
+        public DerivedStat StrengthMeleeDamage
+        {
+            get => _strMeleeDamage;
+            set
+            {
+                _strMeleeDamage = value;
+                OnPropertyChanged(nameof(StrengthMeleeDamage));
+            }
+        }
 
-        public DerivedStat StrengthMeleeDamage { get; set; }
+        private DerivedStat _agiMeleeDamage;
+        public DerivedStat AgilityMeleeDamage
+        {
+            get => _agiMeleeDamage;
+            set
+            {
+                _agiMeleeDamage = value;
+                OnPropertyChanged(nameof(AgilityMeleeDamage));
+            }
+        }
 
-        public DerivedStat AgilityMeleeDamage { get; set; }
-
-        public DerivedStat RangedDamage { get; set; }
+        private DerivedStat _rangedDamage;
+        public DerivedStat RangedDamage
+        {
+            get => _rangedDamage;
+            set
+            {
+                _rangedDamage = value;
+                OnPropertyChanged(nameof(RangedDamage));
+            }
+        }
 
         /*
         public void ModifyStat(string statName, double amount)
@@ -124,6 +153,14 @@ namespace Engine.Model.Character
             Influence.AddBase(Charisma, 0.8);
             */
 
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

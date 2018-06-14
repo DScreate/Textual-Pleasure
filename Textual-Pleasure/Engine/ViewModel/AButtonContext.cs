@@ -65,7 +65,7 @@ namespace Engine.ViewModel
             Session.AddToDisplayText("Button4 Pressed\n");
         }
 
-        public void ButtonBehavior5()
+        public virtual void ButtonBehavior5()
         {
             Session.AddToDisplayText("Button5 Pressed\n");
         }

@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using Engine.Model.Character;
 using Engine.Model.Character.Body;
 using Engine.Model.Factories;
 using Engine.Model.Items.Behaviors;
@@ -30,11 +31,8 @@ namespace Engine.ViewModel
 
         public override void ButtonBehavior3()
         {
-            BaseEquipable BE = new BaseEquipable(1, "BaseSword", 10);
-            BE.EquipEffects.Add("Strength", 1);
-            BE.TargetBodyParts.Add(new Arm());
-
-            Session.CurrentPlayer.AddEquipment(BE);
+            Session.ReplaceDisplayText("You found a basic weapon!");
+            Session.CurrentPlayer.AddEquipment(ItemFactory.CreateWeapon(1, false, false));
         }
 
         public override void ButtonBehavior4()
@@ -45,9 +43,28 @@ namespace Engine.ViewModel
                 Session.AddToDisplayText("Your " + part.Name + " has equipped: ");
                 foreach (BaseEquipable equipable in part.Equipables)
                 {
-                    Session.AddToDisplayText(equipable.Name);
+                    Session.AddToDisplayText(equipable.Name + " ");
                 }
+                Session.AddToDisplayText("\n");
             }
+        }
+
+        public override void ButtonBehavior5()
+        {
+            Session.ReplaceDisplayText("Your current power:\n");
+            Session.AddToDisplayText(Session.CurrentPlayer.myStats.StrengthMeleeDamage.Value.ToString());
+        }
+
+        public override void ButtonBehavior6()
+        {
+            Session.ReplaceDisplayText("You took 1 damage");
+            Session.CurrentPlayer.CurrentHealth--;
+        }
+
+        public override void ButtonBehavior7()
+        {
+            Session.ReplaceDisplayText("You healed 1 damage");
+            Session.CurrentPlayer.CurrentHealth++;
         }
     }
 }

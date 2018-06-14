@@ -60,10 +60,7 @@
             <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Experience}"/>
             <Label Grid.Row="6" Grid.Column="0" Content="Level:"/>
             <Label Grid.Row="6" Grid.Column="1" Content="{Binding CurrentPlayer.Level}"/>
-            <Label Grid.Row="7" Grid.Column="0" Content="Power:"/>
-            <Label Grid.Row="7" Grid.Column="1" Content="{Binding CurrentPlayer.StrengthAttackPower}"/>
-            <Label Grid.Row="8" Grid.Column="0" Content="Skill:"/>
-            <Label Grid.Row="8" Grid.Column="1" Content="{Binding CurrentPlayer.AgilityAttackPower}"/>
+
         </Grid>
 
 
@@ -146,6 +143,76 @@
                 Grid.Column="4"
                 Content="{Binding ButtonContent5}"
                 Command="{Binding ButtonCommand5}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="5,5,5,5"
+                MinWidth="95" 
+                MinHeight="55"
+                Width="Auto"
+                Height="Auto">
+            </Button>
+
+            <Button
+                Grid.Row ="1"
+                Grid.Column="0"
+                Content="{Binding ButtonContent6}"
+                Command="{Binding ButtonCommand6}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="5,5,5,5"
+                MinWidth="75"
+                MinHeight="55"
+                Width="Auto"
+                Height="Auto">
+            </Button>
+
+            <Button
+                Grid.Row ="1"
+                Grid.Column="1"
+                Content="{Binding ButtonContent7}"
+                Command="{Binding ButtonCommand7}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="5,5,5,5"
+                MinWidth="95"
+                MinHeight="55"
+                Width="Auto"
+                Height="Auto">
+            </Button>
+
+            <Button
+                Grid.Row ="1"
+                Grid.Column="2"
+                Content="{Binding ButtonContent8}"
+                Command="{Binding ButtonCommand8}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="5,5,5,5"
+                MinWidth="95"   
+                MinHeight="55"
+                Width="Auto"
+                Height="Auto">
+            </Button>
+
+            <Button
+                Grid.Row ="1"
+                Grid.Column="3"
+                Content="{Binding ButtonContent9}"
+                Command="{Binding ButtonCommand9}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="5,5,5,5"
+                MinWidth="95"
+                MinHeight="55"
+                Width="Auto"
+                Height="Auto">
+            </Button>
+
+            <Button
+                Grid.Row ="1"
+                Grid.Column="4"
+                Content="{Binding ButtonContent10}"
+                Command="{Binding ButtonCommand10}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"

@@ -10,6 +10,8 @@ namespace Engine.Model.Character.Body
         public string Name { get; set; }
         public double Weight { get; set; }
 
+        public string BaseName { get; set; }
+
         public List<IEquipable> Equipables;
 
 

@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
-using System.Windows.Forms;
 using Engine.Annotations;
 using Engine.Model.Character.Body;
-using Engine.Model.Items.Behaviors;
 using Engine.Model.Items.ConcreteItems;
 using Engine.Model.Locations;
 
@@ -136,18 +135,24 @@ namespace Engine.Model.Character
 
         public bool AddEquipment(BaseEquipable equipable)
         {
+            bool sameItem = false;
+
             foreach (BodyPart part in equipable.TargetBodyParts)
             {
                 if (equipable.Exclusive)
                 {
-                    foreach (BaseEquipable subEquipable in BodyParts[part.Name].Equipables)
+                    
+                    foreach (BaseEquipable subEquipable in BodyParts[part.Name].Equipables.ToList())
                     {
                         if (!subEquipable.CanUnequip(this))
                         {
                             return false;
-                        } else if (subEquipable.ItemID == equipable.ItemID)
-                        {
+                        }
 
+                        if (subEquipable.ItemID == equipable.ItemID)
+                        {
+                            // this means we're trying to add the same item
+                            sameItem = true;
                         } else
                         {
                             BodyParts[part.Name].Equipables.Remove(subEquipable);
@@ -156,8 +161,11 @@ namespace Engine.Model.Character
                     }
                 }
 
-                part.Equipables.Add(equipable);
-                equipable.OnEquip(this);
+                if (!sameItem)
+                {
+                    BodyParts[part.Name].Equipables.Add(equipable);
+                    equipable.OnEquip(this);
+                }
             }
 
             return true;
