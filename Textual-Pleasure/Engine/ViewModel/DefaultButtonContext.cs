@@ -66,5 +66,40 @@ namespace Engine.ViewModel
             Session.ReplaceDisplayText("You healed 1 damage");
             Session.CurrentPlayer.CurrentHealth++;
         }
+
+        public override void ButtonBehavior8()
+        {
+            Session.ReplaceDisplayText("Now giving you armor!");
+
+            Session.CurrentPlayer.AddEquipment(ItemFactory.CreateArmor(1, Arm.ArmFactory(false)));
+            Session.CurrentPlayer.AddEquipment(ItemFactory.CreateArmor(1, Arm.ArmFactory(true)));
+            Session.CurrentPlayer.AddEquipment(ItemFactory.CreateArmor(1, Leg.LegFactory(false)));
+            Session.CurrentPlayer.AddEquipment(ItemFactory.CreateArmor(1, Leg.LegFactory(true)));
+
+            Session.CurrentPlayer.AddEquipment(ItemFactory.CreateArmor(1, Torso.TorsoFactory()));
+            Session.CurrentPlayer.AddEquipment(ItemFactory.CreateArmor(1, Head.HeadFactory()));
+
+
+        }
+
+        public override void ButtonBehavior9()
+        {
+            Session.ReplaceDisplayText("Your stats are:\n");
+            Session.AddToDisplayText("Strength: " + Session.CurrentPlayer.myStats.Strength.Value + "\n");
+            Session.AddToDisplayText("Toughness: " + Session.CurrentPlayer.myStats.Toughness.Value + "\n");
+            Session.AddToDisplayText("Agility: " + Session.CurrentPlayer.myStats.Agility.Value + "\n");
+            Session.AddToDisplayText("Perception: " + Session.CurrentPlayer.myStats.Perception.Value + "\n");
+            Session.AddToDisplayText("Intelligence: " + Session.CurrentPlayer.myStats.Intelligence.Value + "\n");
+            Session.AddToDisplayText("Willpower: " + Session.CurrentPlayer.myStats.Willpower.Value + "\n");
+            Session.AddToDisplayText("Charisma: " + Session.CurrentPlayer.myStats.Charisma.Value + "\n");
+            Session.AddToDisplayText("Corruption: " + Session.CurrentPlayer.myStats.Corruption.Value + "\n");
+            Session.AddToDisplayText("Appeal: " + Session.CurrentPlayer.myStats.Appeal.Value + "\n");
+            Session.AddToDisplayText("Health: " + Session.CurrentPlayer.myStats.Health.Value + "\n");
+            Session.AddToDisplayText("Endurance: " + Session.CurrentPlayer.myStats.Endurance.Value + "\n");
+            Session.AddToDisplayText("Power: " + Session.CurrentPlayer.myStats.StrengthMeleeDamage.Value + "\n");
+            Session.AddToDisplayText("Skill: " + Session.CurrentPlayer.myStats.AgilityMeleeDamage.Value + "\n");
+            Session.AddToDisplayText("Accuracy: " + Session.CurrentPlayer.myStats.RangedDamage.Value + "\n");
+        }
+    
     }
 }

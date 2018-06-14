@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Engine.Model.Character.Body;
 using Engine.Model.Items.ConcreteItems;
 using Engine.Model.LanguageDictionaries;
 
@@ -10,6 +12,8 @@ namespace Engine.Model.Factories
         private static List<BaseWeapon> Weapons = new List<BaseWeapon>();
 
         private static List<BaseEquipable> Equipables = new List<BaseEquipable>();
+
+        private static List<BaseArmor> Armors = new List<BaseArmor>();
 
         private static Random prng = new Random();
 
@@ -45,7 +49,7 @@ namespace Engine.Model.Factories
             if (forceSpecial)
             {
                 BW.Price *= 2;
-                foreach (string target in BW.EquipEffects.Keys)
+                foreach (string target in BW.EquipEffects.Keys.ToList())
                 {
                     BW.EquipEffects[target] *= (float)1.5;
                 }
@@ -79,7 +83,7 @@ namespace Engine.Model.Factories
             }
 
 
-            BE = new BaseEquipable(Weapons.Count + 1, name, 15 * level, level);
+            BE = new BaseEquipable(Equipables.Count + 1, name, 15 * level, level);
             BE.Exclusive = true;
 
             if (forceSpecial)
@@ -95,6 +99,68 @@ namespace Engine.Model.Factories
             return BE;
         }
 
+
+        public static BaseArmor CreateArmor(int level, BodyPart BodyPart, bool allowSpecial = false, bool forceSpecial = false)
+        {
+
+            string name = "";
+            string material = "";
+
+            if ((allowSpecial && prng.Next(10) <= 2) || forceSpecial)
+            {
+                material = MaterialsByLevel.GetNextSpecialMaterial(level);
+                forceSpecial = true;
+            }
+            else
+            {
+                material = MaterialsByLevel.GetNextMaterial(level);
+            }
+
+            name = material + " " + BodyPart.Name + " Armor";
+
+            BaseArmor BA = Armors.Find(x => x.Name == name);
+            if (BA != null)
+            {
+                return BA;
+            }
+
+
+            BA = new BaseArmor(Armors.Count + 1, name, 15 * level, level);
+            BA.Exclusive = true;
+
+            BA.TargetBodyParts.Add(BodyPart);
+
+            if (BodyPart.GetType() == typeof(Arm))
+            {
+                BA.EquipEffects.Add("Agility", 1 * level);
+                BA.EquipEffects.Add("Toughness", 1 * level);
+            } else if (BodyPart.GetType() == typeof(Leg))
+            {
+                BA.EquipEffects.Add("Willpower", 1 * level);
+                BA.EquipEffects.Add("Toughness", 1 * level);
+            } else if ((BodyPart.GetType() == typeof(Head)))
+            {
+                BA.EquipEffects.Add("Intelligence", 1 * level);
+                BA.EquipEffects.Add("Toughness", (int)(.5 * level));
+            }
+            else
+            {
+                BA.EquipEffects.Add("Toughness", 1 * level);
+                BA.EquipEffects.Add("Charisma", 1 * level);
+            }
+
+            if (forceSpecial)
+            {
+                BA.Price *= 2;
+                foreach (string target in BA.EquipEffects.Keys.ToList())
+                {
+                    BA.EquipEffects[target] *= (float)1.5;
+                }
+            }
+
+            Armors.Add(BA);
+            return BA;
+        }
 
     }
 }

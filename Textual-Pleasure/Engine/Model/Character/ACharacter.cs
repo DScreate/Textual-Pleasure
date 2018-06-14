@@ -133,7 +133,7 @@ namespace Engine.Model.Character
 
         public Stats myStats { get; set; }
 
-        public bool AddEquipment(BaseEquipable equipable)
+        public virtual bool AddEquipment(BaseEquipable equipable)
         {
             bool sameItem = false;
 
@@ -171,7 +171,7 @@ namespace Engine.Model.Character
             return true;
         }
 
-        public bool RemoveEquipment(BaseEquipable equipable)
+        public virtual bool RemoveEquipment(BaseEquipable equipable)
         {
             foreach (BodyPart part in equipable.TargetBodyParts)
             { 

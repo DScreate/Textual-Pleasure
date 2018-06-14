@@ -46,7 +46,9 @@
     <Compile Include="Command\EventRaiser.cs" />
     <Compile Include="Common\IDescribable.cs" />
     <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Common\RandomNumberGenerator.cs" />
     <Compile Include="Model\Character\AbstractStat.cs" />
+    <Compile Include="Model\Character\BaseMonster.cs" />
     <Compile Include="Model\Character\BaseStat.cs" />
     <Compile Include="Model\Character\Body\Arm.cs" />
     <Compile Include="Model\Character\Body\BodyPart.cs" />
@@ -67,7 +69,10 @@
     <Compile Include="Model\Dice\Roller.cs" />
     <Compile Include="Model\Factories\ItemFactory.cs" />
     <Compile Include="Model\Factories\LocationFactory.cs" />
+    <Compile Include="Model\Factories\MonsterFactory.cs" />
+    <Compile Include="Model\Factories\SmallWorldFactory.cs" />
     <Compile Include="Model\Items\AItem.cs" />
+    <Compile Include="Model\Items\ConcreteItems\BaseArmor.cs" />
     <Compile Include="Model\Items\ConcreteItems\BaseEquipable.cs" />
     <Compile Include="Model\Items\ConcreteItems\EquipRequirements.cs" />
     <Compile Include="Model\Items\Behaviors\IEquipable.cs" />
@@ -76,11 +81,13 @@
     <Compile Include="Model\Items\Behaviors\IUsable.cs" />
     <Compile Include="Model\Items\ConcreteItems\BaseWeapon.cs" />
     <Compile Include="Model\LanguageDictionaries\MaterialsByLevel.cs" />
+    <Compile Include="Model\LanguageDictionaries\MonstersByLevel.cs" />
     <Compile Include="Model\Locations\Area.cs" />
     <Compile Include="Model\Locations\FriendlyLocation.cs" />
     <Compile Include="Model\Locations\HostileLocation.cs" />
     <Compile Include="Model\Locations\Location.cs" />
     <Compile Include="Model\Locations\Path.cs" />
+    <Compile Include="Model\Locations\SmallWorld.cs" />
     <Compile Include="Model\Skills\BaseSkill.cs" />
     <Compile Include="Model\Text\Parser.cs" />
     <Compile Include="Properties\Annotations.cs" />

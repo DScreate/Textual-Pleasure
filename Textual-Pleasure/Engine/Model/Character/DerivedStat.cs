@@ -25,7 +25,6 @@ namespace Engine.Model.Character
 
                 return temp;
             }
-            set => throw new NotImplementedException();
         }
 
         // TODO: Update this to spit out text?

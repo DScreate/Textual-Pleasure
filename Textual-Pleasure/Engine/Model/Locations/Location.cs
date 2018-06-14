@@ -12,6 +12,12 @@ namespace Engine.Model.Locations
         public string Description { get; set; }
         public string ImageName { get; set; }
 
+        public int XCoordinate { get; set; }
+
+        public int YCoordinate { get; set; }
+
+        public string Id { get; set; }
+
         public List<Path> Paths;
 
         private List<ACharacter> Characters { get; set; }
@@ -22,6 +28,8 @@ namespace Engine.Model.Locations
         {
             Name = name;
             Description = description;
+            Characters = new List<ACharacter>();
+            Items = new List<AItem>();
         }
 
         // TODO: Implement error checking?
@@ -62,6 +70,10 @@ namespace Engine.Model.Locations
                 Console.WriteLine("Attempted to remove nonexistance character in " + Name + ", they were " + character);
             }
         }
-        
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
