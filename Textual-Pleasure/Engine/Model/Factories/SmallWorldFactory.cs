@@ -33,7 +33,7 @@ namespace Engine.Model.Factories
         {
             SmallWorld newWorld = new SmallWorld();
 
-            newWorld.CreateLocationAtPoint(x, y, 0);
+            newWorld.CreateLocationAtPoint(x, y, 0, true);
             ExpandWorld(newWorld, x, y);
 
             return newWorld;
@@ -41,20 +41,6 @@ namespace Engine.Model.Factories
 
         internal void ExpandWorld(SmallWorld world, int x, int y)
         {
-
-            // so if I am at point 0, 0
-            // the points are I need are:
-            // 0,1
-            // 0,-1
-            // 1,0
-            // 1,1
-
-            // if i'm at 3,2
-            // 3,1
-            // 3,3
-            // 2,3
-            // 4,3
-
             int i = x;
             int j = y;
 

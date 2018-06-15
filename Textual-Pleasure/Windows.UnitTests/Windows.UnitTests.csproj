@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterTests.cs" />
+    <Compile Include="DiceRollTests.cs" />
     <Compile Include="ItemTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

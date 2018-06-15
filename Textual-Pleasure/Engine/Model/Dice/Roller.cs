@@ -5,7 +5,7 @@ namespace Engine.Model.Dice
 {
     public class Roller
     {
-        private ArrayList _dice;
+        public ArrayList Dice { get; set; }
 
         public int DieSides { get; set; }
 
@@ -27,7 +27,7 @@ namespace Engine.Model.Dice
         {
             Res.Reset();
             
-            foreach (Die die in _dice)
+            foreach (Die die in Dice)
             {
                 int roll = die.Roll();
                 if (roll >= HitThreshold)
@@ -48,36 +48,72 @@ namespace Engine.Model.Dice
             return Res;
         }
 
-        // TODO: Double check this construtor to implement numDice
-        public Roller(int numDice, Random prng, int sides = 6, bool critsOn = false, bool critFailsOn = false)
+        public RollResults RollDiceAgainstThreshold(int numDice)
         {
-            //_dice = _dice;
-            this.Prng = prng;
+            ReplaceDice(numDice);
+
+            Res.Reset();
+
+            foreach (Die die in Dice)
+            {
+                int roll = die.Roll();
+                if (roll >= HitThreshold)
+                {
+                    Res.Hits++;
+                    if (EnableCritHits && roll >= CritThreshold)
+                        Res.Crits++;
+                }
+                else
+                {
+                    Res.Fails++;
+                    if (EnableCritFails && roll <= CritFailThreshold)
+                        Res.Crits++;
+                }
+
+            }
+
+            return Res;
+        }
+
+        public void ReplaceDice(int numDice)
+        {
+            Dice.Clear();
+            for (int i = 0; i < numDice; i++)
+            {
+                AddDie(CreateDie());
+            }
+        }
+
+        // TODO: Double check this construtor to implement numDice
+        public Roller(int seed = 0, int sides = 6, bool critsOn = false, bool critFailsOn = false)
+        {
+            Dice = new ArrayList();
+            this.Prng = new Random(seed);
             this.DieSides = sides;
             this.EnableCritHits = critsOn;
             this.EnableCritFails = critFailsOn;
             Res = new RollResults();
         }
 
-        public void CreateDie()
+        public Die CreateDie()
         {
-            string id = _dice.Count + "_" + DieSides;
-            Die newDie = new Die(DieSides, id, Prng);
+            string id = Dice.Count + "_" + DieSides;
+            return new Die(DieSides, id, Prng);
         }
 
         public void AddDie(Die die)
         {
-            _dice.Add(die);
+            Dice.Add(die);
         }
 
         public void RemoveDie()
         {
-            if (_dice.Count > 0)
-                _dice.RemoveAt(_dice.Count);
+            if (Dice.Count > 0)
+                Dice.RemoveAt(Dice.Count);
         }
     }
 
-    public class RollResults
+    public class RollResults : IEquatable<RollResults>
     {
         public int Hits { get; set; }
         public int Crits { get; set; }
@@ -103,6 +139,33 @@ namespace Engine.Model.Dice
         public override string ToString()
         {
             return "Hits: " + Hits + ", Crits: " + Crits + ", Fails: " + Fails + ", CritFails: " + CritFails;
+        }
+
+        public bool Equals(RollResults other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return Hits == other.Hits && Crits == other.Crits && Fails == other.Fails && CritFails == other.CritFails;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((RollResults) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = Hits;
+                hashCode = (hashCode * 397) ^ Crits;
+                hashCode = (hashCode * 397) ^ Fails;
+                hashCode = (hashCode * 397) ^ CritFails;
+                return hashCode;
+            }
         }
     }
 }

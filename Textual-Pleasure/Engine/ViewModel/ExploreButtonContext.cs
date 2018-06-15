@@ -1,4 +1,7 @@
-﻿using Engine.Model.Character;
+﻿using System.Windows;
+using Engine.Common;
+using Engine.Model.Battle;
+using Engine.Model.Character;
 using Engine.Model.Character.Body;
 using Engine.Model.Factories;
 using Engine.Model.Items.ConcreteItems;
@@ -17,9 +20,9 @@ namespace Engine.ViewModel
 
             ButtonContent6 = "Equipment";
             ButtonContent7 = "Stats";
-            ButtonContent8 = "???";
-            ButtonContent9 = "???";
-            ButtonContent10 = "???";
+            ButtonContent8 = "Armor?";
+            ButtonContent9 = "Weapon?";
+            ButtonContent10 = "Fight!";
 
 
             ButtonEnabled1 = Session.HasLocationToNorth;
@@ -32,9 +35,9 @@ namespace Engine.ViewModel
             ButtonEnabled6 = true;
             ButtonEnabled7 = true;
 
-            ButtonEnabled8 = false;
-            ButtonEnabled9 = false;
-            ButtonEnabled10 = false;
+            ButtonEnabled8 = true;
+            ButtonEnabled9 = true;
+            ButtonEnabled10 = Session.CanBattle;
         }
 
         public override void ButtonBehavior1()
@@ -99,14 +102,75 @@ namespace Engine.ViewModel
 
         public override void ButtonBehavior8()
         {
-           
+            Session.ReplaceDisplayText("Searching around...");
+            if (RandomNumberGenerator.NumberBetween(0, 5) > 1)
+            {
+                Session.AddToDisplayText("\n...you found nothing");
+                return;
+            } 
+
+
+            Session.ReplaceDisplayText("You found a piece of armor!");
+
+            BaseArmor BA;
+
+            switch (RandomNumberGenerator.NumberBetween(0, 7))
+            {
+                case 1:
+                    BA = ItemFactory.CreateArmor(Session.CurrentPlayer.Level, Arm.ArmFactory(false), true);
+                    break;
+                case 2:
+                    BA = ItemFactory.CreateArmor(Session.CurrentPlayer.Level, Arm.ArmFactory(true), true);
+                    break;
+                case 3:
+                    BA = ItemFactory.CreateArmor(Session.CurrentPlayer.Level, Leg.LegFactory(false), true);
+                    break;
+                case 4:
+                    BA = ItemFactory.CreateArmor(Session.CurrentPlayer.Level, Leg.LegFactory(true), true);
+                    break;
+                case 5:
+                    BA = ItemFactory.CreateArmor(Session.CurrentPlayer.Level, Torso.TorsoFactory(), true);
+                    break;
+                case 6:
+                    BA = ItemFactory.CreateArmor(Session.CurrentPlayer.Level, Torso.TorsoFactory(), true);
+                    break;
+                default:
+                    BA = ItemFactory.CreateArmor(Session.CurrentPlayer.Level, Head.HeadFactory(), true);
+                    break;
+            }
+            Session.AddToDisplayText("\nYou found:\n" + BA.Name);
+            Session.CurrentPlayer.AddEquipment(BA);
 
 
         }
 
         public override void ButtonBehavior9()
         {
+            Session.ReplaceDisplayText("Searching around...");
+            if (RandomNumberGenerator.NumberBetween(0, 5) > 1)
+            {
+                Session.AddToDisplayText("\n...you found nothing");
+                return;
+            }
 
+            Session.ReplaceDisplayText("You found a weapon!");
+
+            BaseWeapon BW = ItemFactory.CreateWeapon(Session.CurrentPlayer.Level, true);
+
+            Session.AddToDisplayText("\nYou found:\n" + BW.Name);
+            Session.CurrentPlayer.AddEquipment(BW);
+        }
+
+        public override void ButtonBehavior10()
+        {
+            if (Session.CurrentLocation.Characters.Count > 0)
+            {
+                while (Session.CurrentLocation.Characters.Count > 0)
+                {
+                    BattleInstance battle = new BattleInstance(Session, (PlayerCharacter)Session.CurrentPlayer, (BaseMonster)Session.CurrentLocation.Characters[Session.CurrentLocation.Characters.Count-1]);
+                    Session.CurrentLocation.Characters.RemoveAt(Session.CurrentLocation.Characters.Count -1);
+                }
+            }
         }
     }
 }

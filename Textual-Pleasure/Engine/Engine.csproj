@@ -47,6 +47,7 @@
     <Compile Include="Common\IDescribable.cs" />
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Common\RandomNumberGenerator.cs" />
+    <Compile Include="Model\Battle\BattleInstance.cs" />
     <Compile Include="Model\Character\AbstractStat.cs" />
     <Compile Include="Model\Character\BaseMonster.cs" />
     <Compile Include="Model\Character\BaseStat.cs" />
@@ -93,12 +94,12 @@
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\AButtonContext.cs" />
+    <Compile Include="ViewModel\BattleButtonContext.cs" />
     <Compile Include="ViewModel\DefaultButtonContext.cs" />
     <Compile Include="ViewModel\ExploreButtonContext.cs" />
     <Compile Include="ViewModel\GameSession.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\Battle\" />
     <Folder Include="Model\Items\Behaviors\EquipBehaviors\" />
     <Folder Include="Model\Items\Behaviors\ExternalBehaviors\" />
     <Folder Include="Model\Items\Behaviors\InternalBehaviors\" />

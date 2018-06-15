@@ -8,9 +8,17 @@ namespace Engine.Model.Locations
     {
         private List<Location> _locations = new List<Location>();
 
-        internal void CreateLocationAtPoint(int XCoord, int YCoord, int dangerLevel)
+        //Location[,] _locations = new Location[100,100];
+
+        internal void CreateLocationAtPoint(int XCoord, int YCoord, int dangerLevel, bool forceSpawn = false)
         {
-            Location loc = LocationFactory.CreateLocation(dangerLevel);
+            Location loc = LocationAt(XCoord, YCoord);
+
+            if (loc != null)
+                return;
+
+
+            loc = LocationFactory.CreateLocation(dangerLevel, forceSpawn);
             loc.XCoordinate = XCoord;
             loc.YCoordinate = YCoord;
             _locations.Add(loc);
@@ -18,6 +26,7 @@ namespace Engine.Model.Locations
 
         public Location LocationAt(int xCoordinate, int yCoordinate)
         {
+            
             foreach (Location loc in _locations.ToList())
             {
                 if (loc.XCoordinate == xCoordinate && loc.YCoordinate == yCoordinate)
@@ -27,6 +36,8 @@ namespace Engine.Model.Locations
             }
 
             return null;
+            
+
         }
     }
 }

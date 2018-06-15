@@ -16,7 +16,16 @@ namespace Engine.ViewModel
     {
         //private readonly RelayCommand _clickCommand;
         public ACharacter CurrentPlayer { get; set; }
-        public AButtonContext ButtonContext { get; set; }
+        private AButtonContext _buttonContext;
+        public AButtonContext ButtonContext
+        {
+            get => _buttonContext;
+            set
+            {
+                _buttonContext = value;
+                OnPropertyChanged(nameof(ButtonContext));
+            }
+        }
         public SmallWorld CurrentWorld { get; set; }
 
         private Location _currentLocation;
@@ -27,6 +36,10 @@ namespace Engine.ViewModel
             set
             {
                 _currentLocation = value;
+
+                RandomArmor = RandomNumberGenerator.NumberBetween(0, 5) <= 1;
+                RandomWeapon = RandomNumberGenerator.NumberBetween(0, 5) <= 1;
+
                 OnPropertyChanged(nameof(CurrentLocation));
 
 
@@ -34,6 +47,37 @@ namespace Engine.ViewModel
                 OnPropertyChanged(nameof(HasLocationToEast));
                 OnPropertyChanged(nameof(HasLocationToWest));
                 OnPropertyChanged(nameof(HasLocationToSouth));
+
+                OnPropertyChanged(nameof(ButtonContext.ButtonEnabled1));
+                OnPropertyChanged(nameof(ButtonContext.ButtonEnabled2));
+                OnPropertyChanged(nameof(ButtonContext.ButtonEnabled3));
+                OnPropertyChanged(nameof(ButtonContext.ButtonEnabled4));
+
+                OnPropertyChanged(nameof(CanBattle));
+            }
+        }
+
+        private bool _randomArmor;
+
+        public bool RandomArmor
+        {
+            get => _randomArmor;
+            set
+            {
+                _randomArmor = value;
+                OnPropertyChanged(nameof(RandomArmor));
+            }
+        }
+
+        private bool _randomWeapon;
+
+        public bool RandomWeapon
+        {
+            get => _randomWeapon;
+            set
+            {
+                _randomWeapon = value;
+                OnPropertyChanged(nameof(RandomWeapon));
             }
         }
 
@@ -60,6 +104,7 @@ namespace Engine.ViewModel
             CurrentWorld = factory.CreateWorld(0, 0);
 
             CurrentLocation = CurrentWorld.LocationAt(0, 0);
+            RecalculatePossibleMoves();
             //factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
 
 
@@ -96,74 +141,152 @@ namespace Engine.ViewModel
             Console.SetError(streamwriter);
         }
 
+        public void RecalculatePossibleMoves()
+        {
+            HasLocationToNorth = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate + 1) != null;
+            HasLocationToWest = CurrentWorld.LocationAt(CurrentLocation.XCoordinate - 1, CurrentLocation.YCoordinate) != null;
+            HasLocationToEast = CurrentWorld.LocationAt(CurrentLocation.XCoordinate + 1, CurrentLocation.YCoordinate) != null;
+            HasLocationToSouth = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate - 1) != null;
+        }
 
         public void MoveNorth()
         {
-            CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate + 1);
-            factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
+            if (HasLocationToNorth)
+            {
+                CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate + 1);
+                factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
+
+                RecalculatePossibleMoves();
+            }
+            else
+            {
+                AddToDisplayText("\nThere is nothing in that direction!");
+
+            }
+
+
         }
 
         public void MoveEast()
         {
-            CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate + 1, CurrentLocation.YCoordinate);
-            factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
+            if(HasLocationToEast)
+            {
+                CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate + 1, CurrentLocation.YCoordinate);
+                factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
+
+                RecalculatePossibleMoves();
+            }
+            else
+            {
+                AddToDisplayText("\nThere is nothing in that direction!");
+            }
+
+
 
         }
 
         public void MoveSouth()
         {
-            CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate - 1);
-            factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
+            if (HasLocationToSouth)
+            {
+                CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate - 1);
+                factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
 
+                RecalculatePossibleMoves();
+            }
+            else
+            {
+                AddToDisplayText("\nThere is nothing in that direction!");
+            }
+
+
+        }
+
+        public bool CanBattle
+        {
+            get => CurrentLocation.Characters.Count > 0;
         }
 
         public void MoveWest()
         {
-            CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate - 1, CurrentLocation.YCoordinate);
-            factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
+            if (HasLocationToWest)
+            {
+                CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate - 1, CurrentLocation.YCoordinate);
+                factory.ExpandWorld(CurrentWorld, CurrentLocation.XCoordinate, CurrentLocation.YCoordinate);
+
+                RecalculatePossibleMoves();
+            }
+            else
+            {
+                AddToDisplayText("\nThere is nothing in that direction!");
+            }
+
 
         }
 
+        private bool _hasLocationToNorth;
         public bool HasLocationToNorth
         {
-            get
+            get => _hasLocationToNorth;
+            set
             {
-                return CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate + 1) != null;
+                _hasLocationToNorth = value;
+                OnPropertyChanged(nameof(HasLocationToNorth));
             }
+
+
         }
 
+        private bool _hasLocationToEast;
         public bool HasLocationToEast
         {
-            get
+            get => _hasLocationToEast;
+            set
             {
-                return CurrentWorld.LocationAt(CurrentLocation.XCoordinate + 1, CurrentLocation.YCoordinate) != null;
+                _hasLocationToEast = value;
+                OnPropertyChanged(nameof(HasLocationToEast));
             }
+
         }
 
+        private bool _hasLocationToSouth;
         public bool HasLocationToSouth
         {
-            get
+            get => _hasLocationToSouth;
+            set
             {
-                return CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate - 1) != null;
+                _hasLocationToSouth = value;
+                OnPropertyChanged(nameof(HasLocationToSouth));
             }
         }
 
+        public bool _hasLocationToWest;
         public bool HasLocationToWest
         {
-            get
+            get => _hasLocationToWest;
+            set
             {
-                return CurrentWorld.LocationAt(CurrentLocation.XCoordinate - 1, CurrentLocation.YCoordinate) != null;
+                _hasLocationToWest = value;
+                OnPropertyChanged(nameof(HasLocationToWest));
             }
         }
 
         public void DescribeLocation()
         {
             Location loc = CurrentLocation;
-            AddToDisplayText("Looking at the " + loc.Name + ", you can see that ");
-            foreach (ACharacter character in loc.Characters)
+            AddToDisplayText("\nLooking at the " + loc.Name + ", you can see that ");
+            if (loc.Characters.Count > 0)
             {
-                AddToDisplayText(character.Name + " is here\n");
+                foreach (ACharacter character in loc.Characters)
+                {
+                    AddToDisplayText(character.Name + " is here\n");
+                }
             }
+            else
+            {
+                AddToDisplayText("you are alone save for a few stray animals");
+            }
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

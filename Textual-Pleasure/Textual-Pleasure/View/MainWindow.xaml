@@ -23,7 +23,10 @@
             <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="0" Background="LightBlue" Text="{Binding DisplayText}" TextWrapping="Wrap"/>
+        <ScrollViewer Grid.Column="0" Grid.Row="0" Background="LightBlue">
+            <TextBlock Text="{Binding DisplayText}" TextWrapping="Wrap"/>
+
+        </ScrollViewer>
 
         <!-- The Right-Most Upper section used to Display Information -->
         <Grid Grid.Row="0" Grid.Column="1" Background="LightCoral">
@@ -37,6 +40,9 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
 
 
             </Grid.RowDefinitions>
@@ -62,6 +68,10 @@
             <Label Grid.Row="6" Grid.Column="1" Content="{Binding CurrentPlayer.Level}"/>
             <Label Grid.Row="7" Grid.Column="0" Content="Location:"/>
             <Label Grid.Row="7" Grid.Column="1" Content="{Binding CurrentLocation.Name}"/>
+            <Label Grid.Row="8" Grid.Column="0" Content="Location X:"/>
+            <Label Grid.Row="8" Grid.Column="1" Content="{Binding CurrentLocation.XCoordinate}"/>
+            <Label Grid.Row="9" Grid.Column="0" Content="Location Y:"/>
+            <Label Grid.Row="9" Grid.Column="1" Content="{Binding CurrentLocation.YCoordinate}"/>
         </Grid>
 
 
@@ -201,7 +211,6 @@
                 Grid.Column="2"
                 Content="{Binding ButtonContent8}"
                 Command="{Binding ButtonCommand8}"
-                IsEnabled="{Binding ButtonEnabled8, Converter={StaticResource BooleanToVisibility}}"
                 Visibility="{Binding ButtonEnabled8, Converter={StaticResource BooleanToVisibility}}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"

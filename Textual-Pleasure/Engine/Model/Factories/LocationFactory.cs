@@ -8,7 +8,7 @@ namespace Engine.Model.Factories
     {
         public static List<Location> Locations = new List<Location>();
 
-        public static Location CreateLocation(int dangerLevel)
+        public static Location CreateLocation(int dangerLevel, bool forceSpawn = false)
         {
             string name = GetRandomLocationName(RandomNumberGenerator.NumberBetween(0, 20));
             string id = name + "_" + dangerLevel;
@@ -21,7 +21,7 @@ namespace Engine.Model.Factories
 
 
             loc = new Location(name, "Somewhere out in the world...");
-            if(RandomNumberGenerator.NumberBetween(0, 20) < dangerLevel)
+            if((RandomNumberGenerator.NumberBetween(0, 20) < dangerLevel) || forceSpawn)
                 loc.AddCharacter(MonsterFactory.CreateBaseMonster(dangerLevel, true));
 
             Locations.Add(loc);
