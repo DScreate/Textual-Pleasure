@@ -57,7 +57,7 @@ namespace Engine.ViewModel
         private bool _buttonEnabled9;
         private bool _buttonEnabled10;
 
-        public bool ButtonEnabled1
+        public virtual bool ButtonEnabled1
         {
             get => _buttonEnabled1;
             set
@@ -66,7 +66,7 @@ namespace Engine.ViewModel
                 OnPropertyChanged(nameof(ButtonEnabled1));
             }
         }
-        public bool ButtonEnabled2
+        public virtual bool ButtonEnabled2
         {
             get => _buttonEnabled2;
             set
@@ -75,7 +75,7 @@ namespace Engine.ViewModel
                 OnPropertyChanged(nameof(ButtonEnabled2));
             }
         }
-        public bool ButtonEnabled3
+        public virtual bool ButtonEnabled3
         {
             get => _buttonEnabled3;
             set
@@ -84,7 +84,7 @@ namespace Engine.ViewModel
                 OnPropertyChanged(nameof(ButtonEnabled3));
             }
         }
-        public bool ButtonEnabled4
+        public virtual bool ButtonEnabled4
         {
             get => _buttonEnabled4;
             set
@@ -93,7 +93,7 @@ namespace Engine.ViewModel
                 OnPropertyChanged(nameof(ButtonEnabled4));
             }
         }
-        public bool ButtonEnabled5
+        public virtual bool ButtonEnabled5
         {
             get => _buttonEnabled5;
             set
@@ -102,7 +102,7 @@ namespace Engine.ViewModel
                 OnPropertyChanged(nameof(ButtonEnabled5));
             }
         }
-        public bool ButtonEnabled6
+        public virtual bool ButtonEnabled6
         {
             get => _buttonEnabled6;
             set
@@ -111,7 +111,7 @@ namespace Engine.ViewModel
                 OnPropertyChanged(nameof(ButtonEnabled6));
             }
         }
-        public bool ButtonEnabled7
+        public virtual bool ButtonEnabled7
         {
             get => _buttonEnabled7;
             set
@@ -120,7 +120,7 @@ namespace Engine.ViewModel
                 OnPropertyChanged(nameof(ButtonEnabled7));
             }
         }
-        public bool ButtonEnabled8
+        public virtual bool ButtonEnabled8
         {
             get => _buttonEnabled8;
             set
@@ -129,7 +129,7 @@ namespace Engine.ViewModel
                 OnPropertyChanged(nameof(ButtonEnabled8));
             }
         }
-        public bool ButtonEnabled9
+        public virtual bool ButtonEnabled9
         {
             get => _buttonEnabled9;
             set
@@ -138,7 +138,7 @@ namespace Engine.ViewModel
                 OnPropertyChanged(nameof(ButtonEnabled9));
             }
         }
-        public bool ButtonEnabled10
+        public virtual bool ButtonEnabled10
         {
             get => _buttonEnabled10;
             set

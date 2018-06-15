@@ -95,7 +95,7 @@ namespace Engine.Model.Character
         }
 
         private int _experience;
-        public int Experience
+        public virtual int Experience
         {
             get => _experience;
             set
@@ -107,7 +107,7 @@ namespace Engine.Model.Character
 
         private int _gold;
 
-        public int Gold
+        public virtual int Gold
         {
             get => _gold;
             set

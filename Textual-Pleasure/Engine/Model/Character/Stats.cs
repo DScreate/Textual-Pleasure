@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using Engine.Annotations;
+using Engine.Common;
 
 namespace Engine.Model.Character
 {
@@ -101,15 +102,15 @@ namespace Engine.Model.Character
 
         private void SetupBaseStats()
         {
-            Strength = new BaseStat(3, "Strength");
-            Toughness = new BaseStat(3, "Toughness");
-            Agility = new BaseStat(3, "Agility");
-            Perception = new BaseStat(3, "Perception");
-            Intelligence = new BaseStat(3, "Intelligence");
-            Willpower = new BaseStat(3, "Willpower");
-            Charisma = new BaseStat(3, "Charisma");
+            Strength = new BaseStat(RandomNumberGenerator.NumberBetween(2,5), "Strength");
+            Toughness = new BaseStat(RandomNumberGenerator.NumberBetween(2, 5), "Toughness");
+            Agility = new BaseStat(RandomNumberGenerator.NumberBetween(2, 5), "Agility");
+            Perception = new BaseStat(RandomNumberGenerator.NumberBetween(2, 5), "Perception");
+            Intelligence = new BaseStat(RandomNumberGenerator.NumberBetween(2, 5), "Intelligence");
+            Willpower = new BaseStat(RandomNumberGenerator.NumberBetween(2, 5), "Willpower");
+            Charisma = new BaseStat(RandomNumberGenerator.NumberBetween(2, 5), "Charisma");
             Corruption = new BaseStat(0, "Corruption");
-            Appeal = new BaseStat(3, "Appeal");
+            Appeal = new BaseStat(RandomNumberGenerator.NumberBetween(2, 5), "Appeal");
         }
 
         private void SetupDerivedStats()

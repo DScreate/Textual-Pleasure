@@ -30,12 +30,15 @@ namespace Engine.Model.Battle
         {
 
             // Determine damage to monster
-            int damageToMonster = DiceRoller.RollDiceAgainstThreshold((int)CurrentPlayer.StrengthAttackPower).Hits - 
-                DiceRoller.RollDiceAgainstThreshold((int)CurrentMonster.myStats.Toughness.Value).Hits;
+            RollResults PlayerDamage = DiceRoller.RollDiceAgainstThreshold((int) CurrentPlayer.StrengthAttackPower);
+            RollResults MonsterToughness =
+                DiceRoller.RollDiceAgainstThreshold((int) CurrentMonster.myStats.Toughness.Value);
+
+            int damageToMonster = (PlayerDamage.Hits + (2 * PlayerDamage.Crits)) - MonsterToughness.Hits/2;
 
             if (damageToMonster == 0)
             {
-                RaiseMessage($"You missed the {CurrentMonster.Name}.");
+                RaiseMessage($"You missed {CurrentMonster.Name}.");
             }
             else
             {
@@ -61,9 +64,11 @@ namespace Engine.Model.Battle
             }
             else
             {
+                RollResults MonsterDamage = DiceRoller.RollDiceAgainstThreshold((int)CurrentMonster.StrengthAttackPower);
+                RollResults PlayerToughness =
+                    DiceRoller.RollDiceAgainstThreshold((int)CurrentPlayer.myStats.Toughness.Value);
                 // If monster is still alive, let the monster attack
-                int damageToPlayer = DiceRoller.RollDiceAgainstThreshold((int)CurrentMonster.StrengthAttackPower).Hits -
-                                     DiceRoller.RollDiceAgainstThreshold((int)CurrentMonster.myStats.Toughness.Value).Hits; ;
+                int damageToPlayer = (MonsterDamage.Hits + (2 * MonsterDamage.Crits)) - PlayerToughness.Hits;
 
                 if (damageToPlayer <= 0)
                 {
@@ -72,7 +77,7 @@ namespace Engine.Model.Battle
                 else
                 {
                     CurrentPlayer.CurrentHealth -= damageToPlayer;
-                    RaiseMessage($"The {CurrentMonster.Name} hit you for {damageToPlayer} points.");
+                    RaiseMessage($"{CurrentMonster.Name} hit you for {damageToPlayer} points.");
                 }
 
                 // If player is killed, move them back to their home.
@@ -93,17 +98,18 @@ namespace Engine.Model.Battle
         public void Guard()
         {
             // Determine how much we're blocking
-            int GuardValue = DiceRoller.RollDiceAgainstThreshold((int) CurrentPlayer.myStats.Endurance.Value * 2).Hits;
+            int GuardValue = DiceRoller.RollDiceAgainstThreshold((int) (CurrentPlayer.myStats.Endurance.Value * 1.5)).Hits;
 
-            
-            
-                // If monster is still alive, let the monster attack
-                int damageToPlayer = DiceRoller.RollDiceAgainstThreshold((int)CurrentMonster.StrengthAttackPower).Hits -
-                                     GuardValue;
+            RollResults MonsterDamage = DiceRoller.RollDiceAgainstThreshold((int)CurrentMonster.StrengthAttackPower);
 
-                if (damageToPlayer == 0)
+
+
+            // If monster is still alive, let the monster attack
+            int damageToPlayer = (MonsterDamage.Hits + (2 * MonsterDamage.Crits)) - GuardValue/2;
+
+                if (damageToPlayer <= 0)
                 {
-                    RaiseMessage("The monster attacks, but misses you.");
+                    RaiseMessage("The monster attacks, but you block it!");
                 }
                 else
                 {

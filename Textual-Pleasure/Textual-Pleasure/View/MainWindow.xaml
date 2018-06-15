@@ -243,7 +243,7 @@
                 Content="{Binding ButtonContent10}"
                 Command="{Binding ButtonCommand10}"
                 IsEnabled="{Binding ButtonEnabled10, Converter={StaticResource BooleanToVisibility}}"
-                Visibility="{Binding ButtonEnabled10, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled10, Converter={StaticResource BooleanToVisibility}, Mode=OneWay}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="5,5,5,5"
@@ -253,8 +253,53 @@
                 Height="Auto">
             </Button>
         </Grid>
-        <TextBlock Grid.Row="1" Grid.Column="1" Background="BlanchedAlmond" TextWrapping="WrapWithOverflow">Controls go here (system, inventory acces, etc)
-        </TextBlock>
+        <Grid Grid.Row="1" Grid.Column="1" Background="BlanchedAlmond" DataContext="{Binding ControlsButtonContext}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Button
+                Grid.Row ="0"
+                Grid.Column="0"
+                Content="{Binding ButtonContent1}"
+                Command="{Binding ButtonCommand1}"
+                IsEnabled="{Binding ButtonEnabled1, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled1, Converter={StaticResource BooleanToVisibility}}"
+
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="5,5,5,5"
+                MinWidth="75"
+                MinHeight="55"
+                Width="Auto"
+                Height="Auto">
+            </Button>
+
+            <Button
+                Grid.Row ="0"
+                Grid.Column="1"
+                Content="{Binding ButtonContent2}"
+                Command="{Binding ButtonCommand2}"
+                IsEnabled="{Binding ButtonEnabled2, Converter={StaticResource BooleanToVisibility}}"
+                Visibility="{Binding ButtonEnabled2, Converter={StaticResource BooleanToVisibility}}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="5,5,5,5"
+                MinWidth="95"
+                MinHeight="55"
+                Width="Auto"
+                Height="Auto">
+            </Button>
+        </Grid>
+
 
     </Grid>
 </Window>

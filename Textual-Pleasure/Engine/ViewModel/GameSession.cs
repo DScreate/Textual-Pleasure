@@ -24,8 +24,22 @@ namespace Engine.ViewModel
             {
                 _buttonContext = value;
                 OnPropertyChanged(nameof(ButtonContext));
+
             }
         }
+
+        private ControlsButtonContext _controlsButtonContext;
+
+        public ControlsButtonContext ControlsButtonContext
+        {
+            get => _controlsButtonContext;
+            set
+            {
+                _controlsButtonContext = value;
+                OnPropertyChanged(nameof(ControlsButtonContext));
+            }
+        }
+
         public SmallWorld CurrentWorld { get; set; }
 
         private Location _currentLocation;
@@ -109,6 +123,7 @@ namespace Engine.ViewModel
 
 
             ButtonContext = new ExploreButtonContext(this);
+            ControlsButtonContext = new ControlsButtonContext(this);
             CurrentPlayer = new PlayerCharacter("Vanessa");
             CurrentPlayer.Experience = 0;
             CurrentPlayer.Level = 1;

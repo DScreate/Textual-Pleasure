@@ -95,6 +95,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\AButtonContext.cs" />
     <Compile Include="ViewModel\BattleButtonContext.cs" />
+    <Compile Include="ViewModel\ControlsButtonContext.cs" />
     <Compile Include="ViewModel\DefaultButtonContext.cs" />
     <Compile Include="ViewModel\ExploreButtonContext.cs" />
     <Compile Include="ViewModel\GameSession.cs" />

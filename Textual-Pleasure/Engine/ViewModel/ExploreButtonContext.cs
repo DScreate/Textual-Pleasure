@@ -37,7 +37,7 @@ namespace Engine.ViewModel
 
             ButtonEnabled8 = true;
             ButtonEnabled9 = true;
-            ButtonEnabled10 = Session.CanBattle;
+            ButtonEnabled10 = true;
         }
 
         public override void ButtonBehavior1()
@@ -161,6 +161,7 @@ namespace Engine.ViewModel
             Session.CurrentPlayer.AddEquipment(BW);
         }
 
+
         public override void ButtonBehavior10()
         {
             if (Session.CurrentLocation.Characters.Count > 0)
@@ -170,6 +171,10 @@ namespace Engine.ViewModel
                     BattleInstance battle = new BattleInstance(Session, (PlayerCharacter)Session.CurrentPlayer, (BaseMonster)Session.CurrentLocation.Characters[Session.CurrentLocation.Characters.Count-1]);
                     Session.CurrentLocation.Characters.RemoveAt(Session.CurrentLocation.Characters.Count -1);
                 }
+            }
+            else
+            {
+                Session.AddToDisplayText("\nThere is nobody to fight!");
             }
         }
     }

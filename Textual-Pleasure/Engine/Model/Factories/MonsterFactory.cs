@@ -36,8 +36,8 @@ namespace Engine.Model.Factories
 
             BM = new BaseMonster(name);
 
-            BM.RewardGold = 6 * level;
-            BM.RewardExperiencePoints = 4 * level;
+            BM.RewardGold = 6 * (level + 1);
+            BM.RewardExperiencePoints = 4 * (level + 1);
 
             if (forceSpecial)
             {

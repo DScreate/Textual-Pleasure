@@ -57,7 +57,7 @@ namespace Engine.Model.Factories
             world.CreateLocationAtPoint(i, j, i > j ? i / 2 : j / 2);
 
             j = y + 1;
-            world.CreateLocationAtPoint(i, j, i > j ? i / 2 : j / 2);
+            world.CreateLocationAtPoint(i, j, i > j ? i / 2 : j / 2, true);
         }
     }
 }
